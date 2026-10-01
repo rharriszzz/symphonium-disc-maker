@@ -1,0 +1,19 @@
+{
+  "title": "Example arrangement",
+  "composer": "Composer",
+  "revolution_seconds": 28.126,
+  "events": [
+    {
+      "time_seconds": 0.0,
+      "note": "C5"
+    },
+    {
+      "time_seconds": 0.7,
+      "note": "E5"
+    },
+    {
+      "time_seconds": 1.4,
+      "note": "G5"
+    }
+  ]
+}
