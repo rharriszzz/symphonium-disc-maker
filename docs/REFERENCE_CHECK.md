@@ -18,6 +18,17 @@ The scan is 5100 × 6600 pixels, RGB, with 599.9988 dpi metadata. The recording
 is mono AAC at 48 kHz and approximately 59.968 seconds long. The report records
 SHA-256 fingerprints of the source files and geometry used.
 
+The subsequent [ChatGPT response](CHATGPT_RESPONSE.md) and its
+[aligned-drive profile CSV](data/aligned_drive_profiles.csv) were imported
+unchanged from `CHATGPT_RESPONSE_SYMPHONIUM.zip`. Both downloaded Markdown
+copies and the archive's Markdown member were byte-identical. The response
+reports a separate ensemble shape check and pitch-map comparison; those
+additional analyses have not been reproduced locally. Its four photos are
+stored locally under `reference_material/`, with source hashes in
+`reference_material/chatgpt_response_import.json`. Several photo descriptions
+do not match the attachments; see the follow-up in
+[the questions file](QUESTIONS_FOR_CHATGPT.md).
+
 ## Scan results
 
 The script fits the outer boundary of the largest dark connected component,

@@ -115,7 +115,15 @@ Git, or provide an accessible external path. Useful evidence includes:
 
 The original scan and recording are now accessible at the external paths in
 [the reference check](REFERENCE_CHECK.md). They have not been copied into Git.
-Mechanism photographs and the earlier analysis scripts have not been supplied.
+The response package supplied four 640 × 480 photographs, now copied to
+`reference_material/IMG_3359.jpeg` through `IMG_3362.jpeg` (ignored by Git).
+Direct inspection shows an installed disk, a loose disk, the comb/plucker
+assembly, and the drive mechanism respectively. These do not match several
+photo descriptions in [the supplied response](CHATGPT_RESPONSE.md); in
+particular `IMG_3361.jpeg` does not show the center post. No unobstructed
+center-post seating-profile photograph has been identified in this package.
+The response and its [aligned drive profiles](data/aligned_drive_profiles.csv)
+are retained in Git. The earlier analysis scripts have not been supplied.
 The reference-check overlay uses the actual scan; other disk previews in
 `output/` are generated CAD artwork.
 
