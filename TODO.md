@@ -38,7 +38,8 @@
 - [ ] Order prototypes after confirming geometry and material.
 - [x] Research the Gazelle CUTOK driver requirement in docs/LABELS.md.
 - [x] Establish Gazelle OS preference: Windows 11 first, Mac fallback; exclude Windows 10.
-- [ ] Obtain a compatible CUTOK driver and verify Gazelle connection on Windows 11, or evaluate Mac fallback.
+- [x] Import latest discoveries; close photo/drive interpretation questions and remove CUTOK URLs from the active setup workflow.
+- [ ] Inspect Gazelle enumeration on Windows 11, evaluate the SCAL trial and request Craft Edge's driver if missing; use Apple Silicon Mac fallback if needed.
 - [ ] Fit a plain-paper 1.50-inch center label and confirm the center opening.
 - [ ] Verify print-to-cut alignment before using printed adhesive stock.
 

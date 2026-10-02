@@ -134,6 +134,8 @@ is the default paper fitting preview. The CLI checks the label diameter
 against the innermost music holes and reads the center hole from `geometry.json`.
 See [the label workflow and Gazelle findings](docs/LABELS.md) for examples,
 alignment limitations, and the CUTOK driver investigation.
+The [latest conversation discoveries](docs/CHATGPT_LATEST_DISCOVERIES.md)
+confirm the disk geometry and update the Windows 11 / Mac Gazelle setup path.
 
 A [printable fitting PDF](prototype_pack/label_fit_test.pdf) is ready for a
 plain-paper test at 100% scale. It has a one-inch calibration ruler and

@@ -77,6 +77,10 @@ yet implemented or verified for the Gazelle.
 
 Checked October 1, 2026. Craft Edge currently lists BossKut Gazelle among the
 cutters supported by [Sure Cuts A Lot 6](https://www.surecutsalot.com/software/software_scal.php).
+The software lists Windows 11 support. Craft Edge's
+[product page](https://www.craftedge.com/products/products_scal.php) also lists
+native Apple Silicon Mac versions. These are software capabilities; connection
+to this particular Gazelle has not yet been demonstrated.
 Its [official downloads page](https://www.craftedge.com/download/downloads.php)
 provides the starting point for software evaluation.
 
@@ -88,33 +92,66 @@ driver path from the generic FTDI serial drivers used by some other cutters.
 The guide says a Mac does not need a separate driver, but that is not a test
 of this particular Gazelle on a current Mac.
 
-The guide links to [CUTOK support](https://www.cutok.com/Support.htm).
-That page could not be retrieved during this research, so a working original
-driver download has **not** been verified. The existing dead-link problem
-is real; the live SCAL listing alone is not a solution.
+The CUTOK-hosted resources are unavailable for this workflow. The
+[latest handoff](CHATGPT_LATEST_DISCOVERIES.md) confirms the user's dead-link
+experience; the old URLs are retained below as historical references only.
+A current official Windows 11-compatible Gazelle/CUTOK driver download remains
+**unverified**. Use Craft Edge's live downloads and support pages for the active
+setup path.
 
 The handoff says the original Gazelle software has been lost. Useful next steps
 depend on obtaining a driver for the user's **Windows 11** computer. **Windows
 10 is excluded**. A Mac is the fallback if the Windows 11 connection cannot
-be established. Architecture (x64 or ARM64) and any surviving installer backup
-are still unknown.
+be established. The latest handoff reports that the fallback Mac uses Apple
+Silicon; its macOS version, the Windows architecture (x64 or ARM64), and any
+surviving installer backup remain unknown.
 
-1. Identify the Windows 11 architecture and locate any original CD
-   or installer backup. Note whether the Gazelle already appears
-   as a CUTOK printer or an unknown USB device.
-2. If the Windows driver is missing, ask
+1. Connect and power on the Gazelle to inspect its Windows 11 enumeration in
+   Device Manager and Devices and Printers. Record its device name, whether it
+   appears as CUTOK/DC330 or an unknown USB device, and hardware IDs. This
+   identifies the device; it does not establish that an unknown device can cut.
+   Record the Windows architecture and any surviving original installer.
+2. Evaluate the current SCAL 6 trial from Craft Edge. If Windows already has
+   a working CUTOK printer driver, use the documented USB / Auto connection
+   and try a small scrap-paper circle. Craft Edge's guide expects a driver
+   before the cutting connection is made; the enumeration check above is
+   diagnostic when that historical driver download is unavailable.
+3. If the Windows driver is missing, ask
    [Craft Edge support](https://www.craftedge.com/support/)
    whether they can provide the Gazelle CUTOK driver and confirm support for
    Windows 11 on that architecture. Include the USB device's hardware IDs
-   if available. If this route fails, evaluate the Mac connection described
-   in their setup guide against the actual Mac's OS version and hardware.
-3. Once connection works, test the software with a small scrap-paper circle
-   before buying a license or using a printed label sheet. SCAL trial cuts
+   and model information. The draft below is ready to fill in; it has not been sent.
+4. If Craft Edge cannot establish a working Windows 11 path, evaluate the
+   Apple Silicon Mac using the SCAL trial. Their setup guide says no separate
+   Mac driver is needed. Verify actual USB communication and a correctly
+   scaled paper cut before buying a platform-specific license. SCAL trial cuts
    include extra watermark lines, according to its
    [FAQ](https://www.craftedge.com/support/faq/faq_surecutsalot4.php).
-4. Confirm that the chosen software edition supports the Gazelle alignment
-   workflow needed for printed labels. Cutter support and print-and-cut
-   registration support are separate questions.
+5. After simple cutting works, confirm the chosen software edition supports
+   the Gazelle alignment workflow needed for printed labels. Cutter support
+   and print-and-cut registration support are separate questions.
+
+Third-party CUTOK/DC330 mirrors remain research leads, after the existing
+Windows driver, Craft Edge support, and Mac routes. No mirrored package has
+been verified or installed. If one is evaluated later, preserve and hash it,
+inspect its INF/CAT files, hardware IDs, architecture and signatures, and scan
+it before installation. Do not disable signature enforcement to force an
+unknown driver. This mirrors the latest handoff's revised recommendation.
+
+Automatic registration can wait: fit a plain-paper label, prove simple cutting
+at the correct scale, then establish the actual Gazelle/SCAL alignment procedure
+before adding device-specific marks. The existing print and cut files use the
+same page origin and physical scale.
+
+## Historical references — currently unavailable
+
+These CUTOK-hosted URLs appeared in earlier research. They are historical
+references, with no verified usable download, and are excluded from the active
+setup workflow:
+
+- `https://www.cutok.com/Support.htm`
+- `https://www.cutok.com/down/Manual.pdf`
+- `https://www.cutok.com/down/cutok_Signed.rar`
 
 ## Draft question for Craft Edge
 

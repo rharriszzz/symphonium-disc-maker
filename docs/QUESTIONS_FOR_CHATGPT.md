@@ -4,6 +4,13 @@ Date: October 1, 2026. Repository: `rharriszzz/symphonium-disc-maker`.
 Initial implementation and evidence are in commit `4246149` on `main`;
 later verification and current center-hole corrections are recorded below.
 
+The [latest discoveries handoff](CHATGPT_LATEST_DISCOVERIES.md) has now been
+imported verbatim and read in full. It confirms the current geometry and corrected
+photo identities. Questions 1 and 2 and the photo-identity question are closed.
+The main remaining hardware/software uncertainty is a demonstrated Gazelle
+connection on Windows 11 or the reported Apple Silicon Mac. CUTOK-hosted links
+are historical unavailable references; the active workflow is in [LABELS.md](LABELS.md).
+
 Please review this note alongside your original conversation and supporting
 material. Your two handoff documents provided enough information to start;
 the original scan and recording are now accessible locally. We do not need
@@ -76,15 +83,10 @@ tangential**, recorded separately in `geometry.json`. At the unchanged
 clearance** and **0.05602 inch minimum bridge**. The outer clearance agrees
 closely with the user's approximately 0.0760-inch measurement.
 
-**Question 1:** Can you independently check this rectangular interpretation
-against the original scan and any earlier measurements? In particular, is
-there evidence that the across-shadow edge locations still contain a bias
-large enough to explain the approximately 6.6-pixel axis difference? If you
-disagree, please identify the physical edge you would measure, provide pixel
-coordinates or a marked crop, and explain the alternative dimensions. An
-independent boundary method would be more helpful than repeating the same
-brightness threshold. This review can proceed without asking the user for
-another scan or additional caliper readings.
+**Question 1 — drive rectangle interpretation: resolved.** The independent
+ensemble and opposite-edge methods agree, and the latest handoff confirms
+keeping 0.100 inch radial × 0.090 inch tangential. No additional response is
+needed to select the first-prototype drive openings.
 
 The [paired crops and edge profiles](figures/drive_opposites.png),
 [full method and results](REFERENCE_CHECK.md), and
@@ -119,7 +121,10 @@ the linked CUTOK download was inaccessible. A supported-cutter listing alone
 does not establish Windows 11 driver availability. Please supply the original
 package/source if it exists and distinguish verified OS compatibility from
 an untested suggestion. No working Windows 11 or current Mac connection has
-yet been demonstrated; Windows architecture and Mac details are unknown.
+yet been demonstrated. The latest handoff reports an Apple Silicon Mac;
+Windows architecture and the Mac's OS version remain unknown. CUTOK-hosted
+downloads are historical unavailable references, so the current priority is
+Windows enumeration, the SCAL trial, Craft Edge support and Mac fallback.
 
 ## Requested reply
 
@@ -134,10 +139,10 @@ and prototype dimensions are described above and in `geometry.json`.
 
 ## Follow-up after importing the response package
 
-The response is saved as [CHATGPT_RESPONSE.md](CHATGPT_RESPONSE.md), with the
+The earlier response is saved as [CHATGPT_RESPONSE.md](CHATGPT_RESPONSE.md), with the
 [provided profile CSV](data/aligned_drive_profiles.csv). Four JPEGs were
-extracted to local `reference_material/` and viewed directly. Please clarify
-the photograph identities: the supplied files show:
+extracted to local `reference_material/` and viewed directly. The latest handoff
+now confirms their corrected identities, closing that question. The files show:
 
 - `IMG_3359.jpeg`: the disk installed, with the center post visible through it.
 - `IMG_3360.jpeg`: the loose disk on a wooden surface, rather than an installed view.
@@ -146,8 +151,8 @@ the photograph identities: the supplied files show:
 
 Your response describes `IMG_3361.jpeg` as the best center-post photograph
 and `IMG_3362.jpeg` as an installed disk at the gear. Those descriptions do
-not match these attachments. Please correct the photo descriptions in any
-further analysis. The earlier request for an unobstructed post photograph is
+not match these attachments; the latest handoff corrects those descriptions.
+The earlier request for an unobstructed post photograph is
 withdrawn following the user's corrected 0.1925-inch measurement; the photo
 identity discrepancy no longer blocks the dimensional work.
 
