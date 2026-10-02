@@ -1,0 +1,21 @@
+attack,seconds_from_arbitrary_cycle_start,track,working_pitch,expected_fundamental_hz,reference_status
+1,0.0,15,C6,1046.502,global map support; per-tine measurement pending
+2,1.4063,12,G5,783.991,global map support; per-tine measurement pending
+3,2.8126,10,E5,659.255,global map support; per-tine measurement pending
+4,4.2189,9,D5,587.330,global map support; per-tine measurement pending
+5,5.6252,2,D4,293.665,global map support; per-tine measurement pending
+6,7.0315,1,C4,261.626,global map support; per-tine measurement pending
+7,8.4378,3,E4,329.628,global map support; per-tine measurement pending
+8,9.8441,6,A4,440.000,global map support; per-tine measurement pending
+9,11.2504,7,B4,493.883,global map support; per-tine measurement pending
+10,12.6567,5,G4,391.995,global map support; per-tine measurement pending
+11,14.063,4,F4,349.228,global map support; per-tine measurement pending
+12,15.4693,8,C5,523.251,global map support; per-tine measurement pending
+13,16.8756,11,F5,698.456,global map support; per-tine measurement pending
+14,18.2819,17,E6,1318.510,global map support; per-tine measurement pending
+15,19.6882,19,G6,1567.982,global map support; one original attack
+16,21.0945,20,A6,1760.000,inferred; absent from original disk
+17,22.5008,18,F6,1396.913,global map support; one original attack
+18,23.9071,13,A5,880.000,global map support; per-tine measurement pending
+19,25.3134,14,B5,987.767,global map support; per-tine measurement pending
+20,26.7197,16,D6,1174.659,global map support; per-tine measurement pending

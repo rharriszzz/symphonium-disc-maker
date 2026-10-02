@@ -1,0 +1,1824 @@
+{
+  "scan_source": {
+    "path": "/mnt/c/Users/rharr/OneDrive/Documents/img20261001_00272891.png",
+    "sha256": "28d027319a2089ae00057cc1f4a5251d0b31b841818b010b366b6f2b41686c6f"
+  },
+  "geometry_source": {
+    "path": "/home/rharris/git/symphonium-disc-maker/geometry.json",
+    "sha256": "d305e36dab71aba13cea9222b67958e961b235d77c5ba53d873ac0e8c001b0cd"
+  },
+  "script_source": {
+    "path": "/home/rharris/git/symphonium-disc-maker/scripts/verify_response.py",
+    "sha256": "fdeb4983c12401734250ce9f0e03f91354541aff086d504dee31dd04d5e4e79d"
+  },
+  "ensemble_check": {
+    "aligned_hole_count": 143,
+    "threshold_width_checks": [
+      {
+        "threshold": 130,
+        "radial_width_pixels": 55.29164284511561,
+        "tangential_width_pixels": 49.56532268195609,
+        "aspect_ratio": 1.1155307754153723
+      },
+      {
+        "threshold": 150,
+        "radial_width_pixels": 53.787708656238294,
+        "tangential_width_pixels": 47.860751130948806,
+        "aspect_ratio": 1.1238375367129763
+      },
+      {
+        "threshold": 170,
+        "radial_width_pixels": 52.5286360032661,
+        "tangential_width_pixels": 46.20025952110347,
+        "aspect_ratio": 1.1369770764874587
+      },
+      {
+        "threshold": 190,
+        "radial_width_pixels": 51.173603419603864,
+        "tangential_width_pixels": 44.73583409881128,
+        "aspect_ratio": 1.1439063214194916
+      }
+    ],
+    "outer_ellipse_checks": [
+      {
+        "disc_threshold": 140,
+        "semimajor_pixels": 2107.1242245684425,
+        "semiminor_pixels": 2105.152670649959,
+        "axis_ratio": 1.000936537262105,
+        "axis_difference_percent": 0.09365372621050749
+      },
+      {
+        "disc_threshold": 160,
+        "semimajor_pixels": 2107.78211527923,
+        "semiminor_pixels": 2105.486058243845,
+        "axis_ratio": 1.0010905116309818,
+        "axis_difference_percent": 0.10905116309818386
+      },
+      {
+        "disc_threshold": 180,
+        "semimajor_pixels": 2108.4624681121886,
+        "semiminor_pixels": 2106.0636582964753,
+        "axis_ratio": 1.0011390015711366,
+        "axis_difference_percent": 0.11390015711365553
+      }
+    ],
+    "supplied_profile_check": {
+      "source": {
+        "path": "/home/rharris/git/symphonium-disc-maker/docs/data/aligned_drive_profiles.csv",
+        "sha256": "f0c8c02a516908655059860b43e77e7e31ac5e0b8b2f9fbdab730e1012579807"
+      },
+      "threshold_width_checks": [
+        {
+          "threshold": 130,
+          "radial_width_pixels": 54.666948051109244,
+          "tangential_width_pixels": 49.024694231313134,
+          "aspect_ratio": 1.1150900359148448
+        },
+        {
+          "threshold": 150,
+          "radial_width_pixels": 53.05788675008515,
+          "tangential_width_pixels": 47.16465945501842,
+          "aspect_ratio": 1.124950065645808
+        },
+        {
+          "threshold": 170,
+          "radial_width_pixels": 51.665711631091476,
+          "tangential_width_pixels": 45.441862385369284,
+          "aspect_ratio": 1.1369628998244152
+        },
+        {
+          "threshold": 190,
+          "radial_width_pixels": 50.469195637274225,
+          "tangential_width_pixels": 43.89615605839443,
+          "aspect_ratio": 1.1497406645387303
+        }
+      ]
+    },
+    "limits": "ensemble bright-interior crossings support shape ratio, not absolute cut size; ellipse variation combines scan scaling and actual disk shape"
+  },
+  "pitch_map_check": {
+    "source": {
+      "path": "/mnt/c/Users/rharr/Downloads/116 E Main St 15.m4a",
+      "sha256": "49d4f580e967ef8f5a2e8dc5df8c7f49788f7efc4d9fa06d5bb499b89c431de1"
+    },
+    "duration_seconds": 59.924,
+    "candidate_start_count": 22,
+    "period_seconds": 28.126,
+    "trials": [
+      {
+        "fft_window_samples": 4096,
+        "frequency_evidence": "fundamental_only",
+        "full_recording_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 279.0005100545242,
+            "phase_seconds": 21.11699680056879
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 161.75197720700174,
+            "phase_seconds": 20.937022396018488
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 142.34122418463573,
+            "phase_seconds": 21.096999644507644
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 108.56257740747637,
+            "phase_seconds": 20.327109136153574
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 100.71267256904022,
+            "phase_seconds": 21.476945609669393
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 95.5007012901127,
+            "phase_seconds": 1.8597355136864557
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 95.350768695117,
+            "phase_seconds": 20.647063633131886
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 93.79311825342882,
+            "phase_seconds": 20.627066477070745
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 81.9384731982559,
+            "phase_seconds": 27.59607536437967
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 76.85058229380614,
+            "phase_seconds": 17.387527195165305
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 76.29185630833153,
+            "phase_seconds": 23.016726626377533
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 72.12821353013109,
+            "phase_seconds": 24.35653608247423
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 67.59961404391308,
+            "phase_seconds": 17.07757127621756
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 64.99834895346658,
+            "phase_seconds": 20.1371361535727
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 63.261860384606315,
+            "phase_seconds": 2.8795904728048347
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 62.7953881099715,
+            "phase_seconds": 11.998293636686812
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 61.302692672502296,
+            "phase_seconds": 17.65748880199076
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 60.29192204669046,
+            "phase_seconds": 17.377528617134733
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 54.28622777161223,
+            "phase_seconds": 17.09756843227871
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 52.902778279171955,
+            "phase_seconds": 17.87745751866335
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 51.30957922589436,
+            "phase_seconds": 21.08700106647707
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 50.74874471787092,
+            "phase_seconds": 27.89603270529684
+          }
+        ],
+        "first_revolution_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 244.1161633197854,
+            "phase_seconds": 21.11699680056879,
+            "held_out_score_at_training_phase": 228.474534331585
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 143.82420028873636,
+            "phase_seconds": 20.94702097404906,
+            "held_out_score_at_training_phase": 129.126241667761
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 107.21718498159711,
+            "phase_seconds": 20.327109136153574,
+            "held_out_score_at_training_phase": 80.5002192836279
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 101.11862669805933,
+            "phase_seconds": 21.106998222538216,
+            "held_out_score_at_training_phase": 129.44455812377583
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 89.96272635627707,
+            "phase_seconds": 20.627066477070745,
+            "held_out_score_at_training_phase": 75.64593240406673
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 87.55447490254143,
+            "phase_seconds": 20.647063633131886,
+            "held_out_score_at_training_phase": 82.24799483366488
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 86.90701972137741,
+            "phase_seconds": 17.90745325275507,
+            "held_out_score_at_training_phase": 66.39331031272133
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 81.86703831900898,
+            "phase_seconds": 24.35653608247423,
+            "held_out_score_at_training_phase": 46.881194717975475
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 76.8639140770963,
+            "phase_seconds": 17.377528617134733,
+            "held_out_score_at_training_phase": 61.28188533223447
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 74.78337894843541,
+            "phase_seconds": 2.909586206896552,
+            "held_out_score_at_training_phase": 34.17112219339983
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 72.30121785695171,
+            "phase_seconds": 1.8897312477781731,
+            "held_out_score_at_training_phase": 80.28729814535116
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 69.13630200619862,
+            "phase_seconds": 24.316541770351936,
+            "held_out_score_at_training_phase": 39.93631975637796
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 69.06641215619966,
+            "phase_seconds": 23.026725204408105,
+            "held_out_score_at_training_phase": 64.96725709342338
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 67.55601625936154,
+            "phase_seconds": 21.37695982936367,
+            "held_out_score_at_training_phase": 48.95196258828341
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 63.40527898819358,
+            "phase_seconds": 22.73676644152151,
+            "held_out_score_at_training_phase": 14.532485151242279
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 62.98613080243898,
+            "phase_seconds": 17.65748880199076,
+            "held_out_score_at_training_phase": 38.91025460070787
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 59.0584816968868,
+            "phase_seconds": 26.956166370423038,
+            "held_out_score_at_training_phase": 16.50308568070792
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 55.73455760449086,
+            "phase_seconds": 17.06757269818699,
+            "held_out_score_at_training_phase": 65.27728746562656
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 54.505591683159565,
+            "phase_seconds": 24.6564934233914,
+            "held_out_score_at_training_phase": 16.542336517321907
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 53.42537425622189,
+            "phase_seconds": 21.41695414148596,
+            "held_out_score_at_training_phase": 30.428085904114504
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 49.16244851457187,
+            "phase_seconds": 24.6564934233914,
+            "held_out_score_at_training_phase": 33.23235352219267
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 47.72314153465074,
+            "phase_seconds": 17.037576964095273,
+            "held_out_score_at_training_phase": -0.09824955018157289
+          }
+        ],
+        "second_revolution_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 253.33844459027955,
+            "phase_seconds": 21.176988268752222
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 148.6666054462983,
+            "phase_seconds": 20.927023817987916
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 138.04447371890234,
+            "phase_seconds": 21.08700106647707
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 113.82506021239743,
+            "phase_seconds": 21.486944187699965
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 112.96756794056088,
+            "phase_seconds": 1.8597355136864557
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 83.39571948919043,
+            "phase_seconds": 20.337107714184146
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 82.29124810819447,
+            "phase_seconds": 27.59607536437967
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 82.24799483366488,
+            "phase_seconds": 20.647063633131886
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 77.8339149576973,
+            "phase_seconds": 20.147134731603273
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 76.69363678230984,
+            "phase_seconds": 20.637065055101317
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 69.69816146941531,
+            "phase_seconds": 17.07757127621756
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 69.06414527181558,
+            "phase_seconds": 17.397525773195877
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 65.89039484767997,
+            "phase_seconds": 11.998293636686812
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 65.40146161638266,
+            "phase_seconds": 23.016726626377533
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 62.5086667821487,
+            "phase_seconds": 14.147987913259865
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 61.075844119752105,
+            "phase_seconds": 17.09756843227871
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 60.88140448701719,
+            "phase_seconds": 16.617636686811235
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 60.55799082451177,
+            "phase_seconds": 19.83717881265553
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 59.01568986685629,
+            "phase_seconds": 14.787896907216496
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 57.12929530803399,
+            "phase_seconds": 19.20726839672947
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 56.59770480110868,
+            "phase_seconds": 18.287399217916814
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 53.602477314371875,
+            "phase_seconds": 14.997867045858513
+          }
+        ]
+      },
+      {
+        "fft_window_samples": 4096,
+        "frequency_evidence": "fundamental_and_harmonics",
+        "full_recording_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 261.7437833412269,
+            "phase_seconds": 21.106998222538216
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 199.7669635011725,
+            "phase_seconds": 21.106998222538216
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 155.82460215265561,
+            "phase_seconds": 21.11699680056879
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 116.6744108260131,
+            "phase_seconds": 21.096999644507644
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 106.72212757909247,
+            "phase_seconds": 20.94702097404906
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 86.57687880553912,
+            "phase_seconds": 21.047006754354783
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 86.09087414997863,
+            "phase_seconds": 17.897454674724496
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 85.07085056959296,
+            "phase_seconds": 17.917451830785637
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 76.76156087111036,
+            "phase_seconds": 21.42695271951653
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 74.59296184555352,
+            "phase_seconds": 20.65706221116246
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 73.97881490600979,
+            "phase_seconds": 1.8697340917170282
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 73.9724798602614,
+            "phase_seconds": 21.047006754354783
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 70.6600745609877,
+            "phase_seconds": 14.697909704941344
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 64.6576611320966,
+            "phase_seconds": 25.43638250977604
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 62.448571896429804,
+            "phase_seconds": 21.366961251333098
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 59.9262249095702,
+            "phase_seconds": 20.1371361535727
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 59.76325285692501,
+            "phase_seconds": 27.586076786349096
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 58.923281433915726,
+            "phase_seconds": 26.78619054390331
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 57.67393303528342,
+            "phase_seconds": 20.35710487024529
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 54.61839948360162,
+            "phase_seconds": 21.057005332385355
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 53.178708162283925,
+            "phase_seconds": 14.737904017063634
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 52.64984499961822,
+            "phase_seconds": 21.08700106647707
+          }
+        ],
+        "first_revolution_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 224.03073365149484,
+            "phase_seconds": 21.11699680056879,
+            "held_out_score_at_training_phase": 212.73377807081232
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 150.67097583117615,
+            "phase_seconds": 21.11699680056879,
+            "held_out_score_at_training_phase": 185.30644643779237
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 121.49286110348233,
+            "phase_seconds": 21.11699680056879,
+            "held_out_score_at_training_phase": 138.95362121469535
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 94.68869332274596,
+            "phase_seconds": 17.92745040881621,
+            "held_out_score_at_training_phase": 51.52757107989274
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 83.20241182107729,
+            "phase_seconds": 21.047006754354783,
+            "held_out_score_at_training_phase": 67.14996401935078
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 78.96635066417555,
+            "phase_seconds": 17.90745325275507,
+            "held_out_score_at_training_phase": 65.32195491513384
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 77.61800888711367,
+            "phase_seconds": 21.106998222538216,
+            "held_out_score_at_training_phase": 111.94580895156894
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 73.73604752881579,
+            "phase_seconds": 12.308249555634555,
+            "held_out_score_at_training_phase": 12.832504746759726
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 71.10899389075304,
+            "phase_seconds": 21.03700817632421,
+            "held_out_score_at_training_phase": 58.532898463704605
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 68.86976439810591,
+            "phase_seconds": 21.41695414148596,
+            "held_out_score_at_training_phase": 56.78915355375512
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 64.79089974143704,
+            "phase_seconds": 20.65706221116246,
+            "held_out_score_at_training_phase": 65.98049075408768
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 63.9346217461499,
+            "phase_seconds": 14.737904017063634,
+            "held_out_score_at_training_phase": 34.097067293313955
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 63.17027746715825,
+            "phase_seconds": 2.909586206896552,
+            "held_out_score_at_training_phase": 30.668045866940567
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 62.699024902642876,
+            "phase_seconds": 3.709472449342339,
+            "held_out_score_at_training_phase": 17.014043774085696
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 62.632095933107216,
+            "phase_seconds": 17.11756558833985,
+            "held_out_score_at_training_phase": 42.121687384773224
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 62.352218154792446,
+            "phase_seconds": 3.999431212228937,
+            "held_out_score_at_training_phase": 19.27572973028514
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 60.63272983043856,
+            "phase_seconds": 21.03700817632421,
+            "held_out_score_at_training_phase": 51.50211607497752
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 55.97889618039283,
+            "phase_seconds": 25.43638250977604,
+            "held_out_score_at_training_phase": 52.07755243229471
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 55.879738761096185,
+            "phase_seconds": 0.2799601848560256,
+            "held_out_score_at_training_phase": 47.13536698430751
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 51.420635781211466,
+            "phase_seconds": 25.90631567721294,
+            "held_out_score_at_training_phase": 28.657000215060577
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 48.75250131810914,
+            "phase_seconds": 27.586076786349096,
+            "held_out_score_at_training_phase": 56.44130337247203
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 46.78916310766222,
+            "phase_seconds": 18.157417703519375,
+            "held_out_score_at_training_phase": 26.593346808321424
+          }
+        ],
+        "second_revolution_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 229.1032661597032,
+            "phase_seconds": 21.08700106647707
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 190.7550320126615,
+            "phase_seconds": 21.106998222538216
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 138.95362121469535,
+            "phase_seconds": 21.11699680056879
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 119.9859503431358,
+            "phase_seconds": 21.08700106647707
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 104.55419731410758,
+            "phase_seconds": 20.94702097404906
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 90.691777153399,
+            "phase_seconds": 1.8697340917170282
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 85.40823443869034,
+            "phase_seconds": 21.486944187699965
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 77.45936030431349,
+            "phase_seconds": 14.697909704941344
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 72.65651200032782,
+            "phase_seconds": 20.147134731603273
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 72.49251041014058,
+            "phase_seconds": 21.486944187699965
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 69.65391671582277,
+            "phase_seconds": 17.99744045503022
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 66.45815216393241,
+            "phase_seconds": 20.647063633131886
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 63.230452165877736,
+            "phase_seconds": 21.366961251333098
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 62.84008300574185,
+            "phase_seconds": 19.83717881265553
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 61.178735676885985,
+            "phase_seconds": 10.19854959118379
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 60.73379480225878,
+            "phase_seconds": 26.796189121933878
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 60.0328916120373,
+            "phase_seconds": 23.836610024884465
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 59.89360395514757,
+            "phase_seconds": 21.0770024884465
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 59.88692268476123,
+            "phase_seconds": 11.348386064699609
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 57.72333026273415,
+            "phase_seconds": 21.42695271951653
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 57.50361197900047,
+            "phase_seconds": 21.057005332385355
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 54.4190989125823,
+            "phase_seconds": 20.367103448275863
+          }
+        ]
+      },
+      {
+        "fft_window_samples": 8192,
+        "frequency_evidence": "fundamental_only",
+        "full_recording_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 302.2482411443006,
+            "phase_seconds": 21.12699537859936
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 169.1219860229569,
+            "phase_seconds": 20.907026661926768
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 155.78550866311932,
+            "phase_seconds": 21.067003910415927
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 109.50160542889188,
+            "phase_seconds": 20.297113402061857
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 104.65375296031883,
+            "phase_seconds": 20.597070742979025
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 103.5002597215575,
+            "phase_seconds": 1.8197412015641667
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 99.07450868281879,
+            "phase_seconds": 21.486944187699965
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 90.01472618464952,
+            "phase_seconds": 20.6070693210096
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 89.92214870529632,
+            "phase_seconds": 27.56607963028795
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 78.11429609605052,
+            "phase_seconds": 17.32753572698187
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 72.95042267561851,
+            "phase_seconds": 24.296544614290795
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 67.6975646482013,
+            "phase_seconds": 17.0275783860647
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 66.881674161016,
+            "phase_seconds": 2.849594738713118
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 66.82624843344135,
+            "phase_seconds": 14.947874155705652
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 64.57520605422198,
+            "phase_seconds": 22.986730892285816
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 57.76701730641739,
+            "phase_seconds": 17.037576964095273
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 54.69341803554821,
+            "phase_seconds": 11.948300746533949
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 54.67018228021272,
+            "phase_seconds": 14.747902595094205
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 53.867161781661714,
+            "phase_seconds": 25.866321365090652
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 53.56244553123914,
+            "phase_seconds": 26.186275862068968
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 51.019309351112895,
+            "phase_seconds": 24.566506221116246
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 42.988154453867956,
+            "phase_seconds": 17.83746320654106
+          }
+        ],
+        "first_revolution_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 269.11081769939517,
+            "phase_seconds": 21.106998222538216,
+            "held_out_score_at_training_phase": 278.8359133626706
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 155.97634124477463,
+            "phase_seconds": 20.937022396018488,
+            "held_out_score_at_training_phase": 148.015384065139
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 125.23490496090861,
+            "phase_seconds": 21.0770024884465,
+            "held_out_score_at_training_phase": 147.5187676923119
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 105.0065387222478,
+            "phase_seconds": 20.297113402061857,
+            "held_out_score_at_training_phase": 99.25488209945432
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 100.61597372358295,
+            "phase_seconds": 20.597070742979025,
+            "held_out_score_at_training_phase": 93.61987087583317
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 87.32827471793992,
+            "phase_seconds": 21.42695271951653,
+            "held_out_score_at_training_phase": 90.21315591665488
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 86.71503988188347,
+            "phase_seconds": 20.6070693210096,
+            "held_out_score_at_training_phase": 79.03799767092092
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 86.33624428270716,
+            "phase_seconds": 24.306543192321367,
+            "held_out_score_at_training_phase": 51.30221401904733
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 86.30302249161984,
+            "phase_seconds": 1.8297397795947388,
+            "held_out_score_at_training_phase": 100.11977867534385
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 80.01648009825067,
+            "phase_seconds": 17.3175371489513,
+            "held_out_score_at_training_phase": 67.49999009413095
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 79.94551170115551,
+            "phase_seconds": 27.59607536437967,
+            "held_out_score_at_training_phase": 76.55359669675418
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 78.97134799342835,
+            "phase_seconds": 2.8695918947742625,
+            "held_out_score_at_training_phase": 46.63898986798557
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 68.56911342688701,
+            "phase_seconds": 26.45623746889442,
+            "held_out_score_at_training_phase": 42.57244033327297
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 64.51213155593425,
+            "phase_seconds": 17.607495911837894,
+            "held_out_score_at_training_phase": 44.26325179919135
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 64.02473532160242,
+            "phase_seconds": 17.0275783860647,
+            "held_out_score_at_training_phase": 64.73664838837372
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 59.08222785363989,
+            "phase_seconds": 25.376391041592605,
+            "held_out_score_at_training_phase": 24.98339157866318
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 59.04007388006763,
+            "phase_seconds": 17.037576964095273,
+            "held_out_score_at_training_phase": 54.1831748094999
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 57.427634370888065,
+            "phase_seconds": 24.266548880199075,
+            "held_out_score_at_training_phase": 35.07619971310365
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 56.38185619486782,
+            "phase_seconds": 25.886318521151797,
+            "held_out_score_at_training_phase": 42.89727015339871
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 51.17881592021623,
+            "phase_seconds": 17.83746320654106,
+            "held_out_score_at_training_phase": 33.15107842104269
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 49.12734366591776,
+            "phase_seconds": 3.149552079630288,
+            "held_out_score_at_training_phase": 44.75137531076331
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 47.02123526269278,
+            "phase_seconds": 14.727905439033062,
+            "held_out_score_at_training_phase": 51.80061405561232
+          }
+        ],
+        "second_revolution_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 294.1913196625634,
+            "phase_seconds": 21.156991112691077
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 162.68423477927402,
+            "phase_seconds": 20.897028083896195
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 148.10770587529314,
+            "phase_seconds": 21.067003910415927
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 108.72612900119516,
+            "phase_seconds": 21.476945609669393
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 106.57820686568411,
+            "phase_seconds": 1.8097426235335943
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 100.97198344452842,
+            "phase_seconds": 20.30711198009243
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 96.23244472470412,
+            "phase_seconds": 27.556081052257376
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 93.61987087583317,
+            "phase_seconds": 20.597070742979025
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 79.74100742964417,
+            "phase_seconds": 20.597070742979025
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 72.72382288894235,
+            "phase_seconds": 17.337534305012444
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 68.21752911778044,
+            "phase_seconds": 2.8096004265908285
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 68.18468610019427,
+            "phase_seconds": 17.047575542125845
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 62.77584486012441,
+            "phase_seconds": 14.957872733736226
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 62.352190225211615,
+            "phase_seconds": 20.10714041948098
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 60.62847430457748,
+            "phase_seconds": 22.976732314255244
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 60.18426480568196,
+            "phase_seconds": 26.17627728403839
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 59.75637315566565,
+            "phase_seconds": 11.958299324564523
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 58.537255551337026,
+            "phase_seconds": 14.757901173124777
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 56.80538404244296,
+            "phase_seconds": 16.237690721649482
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 53.598137270899265,
+            "phase_seconds": 24.286546036260223
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 53.282533633031285,
+            "phase_seconds": 9.85859793814433
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 48.18203262467785,
+            "phase_seconds": 14.097995023107003
+          }
+        ]
+      },
+      {
+        "fft_window_samples": 8192,
+        "frequency_evidence": "fundamental_and_harmonics",
+        "full_recording_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 265.5235498522086,
+            "phase_seconds": 21.08700106647707
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 196.06679354423025,
+            "phase_seconds": 21.096999644507644
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 159.1047069914745,
+            "phase_seconds": 21.106998222538216
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 131.11104471724875,
+            "phase_seconds": 21.067003910415927
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 123.87845060237343,
+            "phase_seconds": 20.98701528617135
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 95.22124825726003,
+            "phase_seconds": 21.02700959829364
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 90.54255296616753,
+            "phase_seconds": 17.92745040881621
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 83.93909117753924,
+            "phase_seconds": 20.977016708140777
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 78.23477487257607,
+            "phase_seconds": 17.87745751866335
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 75.26833887976952,
+            "phase_seconds": 1.8397383576253112
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 71.8030001256647,
+            "phase_seconds": 21.39695698542481
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 67.20653287720057,
+            "phase_seconds": 17.947447564877358
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 65.86678356907062,
+            "phase_seconds": 20.627066477070745
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 64.6035017895875,
+            "phase_seconds": 20.317110558123
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 62.55754708405638,
+            "phase_seconds": 27.576078208318524
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 60.69823182085744,
+            "phase_seconds": 14.697909704941344
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 59.81686831294198,
+            "phase_seconds": 21.067003910415927
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 58.46082037743255,
+            "phase_seconds": 25.406386775684325
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 57.98129778026226,
+            "phase_seconds": 14.747902595094205
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 56.56629918072102,
+            "phase_seconds": 2.8395961606825453
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 54.01408610960364,
+            "phase_seconds": 26.746196231781017
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 50.33894697480076,
+            "phase_seconds": 26.17627728403839
+          }
+        ],
+        "first_revolution_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 242.17726479456718,
+            "phase_seconds": 21.08700106647707,
+            "held_out_score_at_training_phase": 236.89560101903837
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 158.79524601404637,
+            "phase_seconds": 21.096999644507644,
+            "held_out_score_at_training_phase": 193.04103321403562
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 127.10527089799562,
+            "phase_seconds": 21.096999644507644,
+            "held_out_score_at_training_phase": 151.77306429130482
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 116.46359476210152,
+            "phase_seconds": 20.99701386420192,
+            "held_out_score_at_training_phase": 102.49572089260992
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 100.66407651670963,
+            "phase_seconds": 17.917451830785637,
+            "held_out_score_at_training_phase": 69.8936161319911
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 98.90127614660855,
+            "phase_seconds": 21.0770024884465,
+            "held_out_score_at_training_phase": 130.61357337515153
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 91.3444939518599,
+            "phase_seconds": 21.02700959829364,
+            "held_out_score_at_training_phase": 80.72080627155196
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 79.63616087516871,
+            "phase_seconds": 20.977016708140777,
+            "held_out_score_at_training_phase": 73.1297512207281
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 75.97354534757682,
+            "phase_seconds": 17.897454674724496,
+            "held_out_score_at_training_phase": 67.3648537692785
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 72.08119930112021,
+            "phase_seconds": 12.308249555634555,
+            "held_out_score_at_training_phase": 50.19864554023345
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 67.50968276466932,
+            "phase_seconds": 20.637065055101317,
+            "held_out_score_at_training_phase": 52.90477906342804
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 65.48216342957588,
+            "phase_seconds": 20.30711198009243,
+            "held_out_score_at_training_phase": 54.69071870537524
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 65.32248501521553,
+            "phase_seconds": 3.6994738713117674,
+            "held_out_score_at_training_phase": 24.554954690591245
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 64.92591141988638,
+            "phase_seconds": 17.92745040881621,
+            "held_out_score_at_training_phase": 54.565809279998355
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 63.90104040513564,
+            "phase_seconds": 12.288252399573409,
+            "held_out_score_at_training_phase": 15.877106339521095
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 63.45147955422309,
+            "phase_seconds": 2.969577675079986,
+            "held_out_score_at_training_phase": 51.34039151977948
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 62.80468127787327,
+            "phase_seconds": 2.8695918947742625,
+            "held_out_score_at_training_phase": 37.76454349072343
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 57.46664212973108,
+            "phase_seconds": 14.71790686100249,
+            "held_out_score_at_training_phase": 43.546152234698376
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 56.12959128221583,
+            "phase_seconds": 25.89631709918237,
+            "held_out_score_at_training_phase": 40.30084828220847
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 54.38476196866247,
+            "phase_seconds": 25.416385353714897,
+            "held_out_score_at_training_phase": 49.498003474673276
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 54.17992784959308,
+            "phase_seconds": 27.59607536437967,
+            "held_out_score_at_training_phase": 61.75557156372293
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 49.04936973431212,
+            "phase_seconds": 3.149552079630288,
+            "held_out_score_at_training_phase": 40.655370734334305
+          }
+        ],
+        "second_revolution_ranking": [
+          {
+            "start_pitch": "C4",
+            "last_occupied_pitch": "G6",
+            "score": 241.0824046002791,
+            "phase_seconds": 21.11699680056879
+          },
+          {
+            "start_pitch": "C3",
+            "last_occupied_pitch": "G5",
+            "score": 194.65578546972375,
+            "phase_seconds": 21.08700106647707
+          },
+          {
+            "start_pitch": "F2",
+            "last_occupied_pitch": "C5",
+            "score": 156.36560773898228,
+            "phase_seconds": 21.11699680056879
+          },
+          {
+            "start_pitch": "C5",
+            "last_occupied_pitch": "G7",
+            "score": 130.90403511465743,
+            "phase_seconds": 21.067003910415927
+          },
+          {
+            "start_pitch": "A3",
+            "last_occupied_pitch": "E6",
+            "score": 112.64982571237043,
+            "phase_seconds": 20.927023817987916
+          },
+          {
+            "start_pitch": "A2",
+            "last_occupied_pitch": "E5",
+            "score": 82.42689255801363,
+            "phase_seconds": 21.047006754354783
+          },
+          {
+            "start_pitch": "G3",
+            "last_occupied_pitch": "D6",
+            "score": 80.44877775828932,
+            "phase_seconds": 1.8397383576253112
+          },
+          {
+            "start_pitch": "E4",
+            "last_occupied_pitch": "B6",
+            "score": 76.97476895948577,
+            "phase_seconds": 21.46694703163882
+          },
+          {
+            "start_pitch": "D2",
+            "last_occupied_pitch": "A4",
+            "score": 73.3376541035922,
+            "phase_seconds": 20.9670181301102
+          },
+          {
+            "start_pitch": "E3",
+            "last_occupied_pitch": "B5",
+            "score": 71.31573025852713,
+            "phase_seconds": 17.937448986846782
+          },
+          {
+            "start_pitch": "B3",
+            "last_occupied_pitch": "F6",
+            "score": 67.84209102403162,
+            "phase_seconds": 26.76619338784216
+          },
+          {
+            "start_pitch": "E2",
+            "last_occupied_pitch": "B4",
+            "score": 66.93393773176696,
+            "phase_seconds": 17.147561322431567
+          },
+          {
+            "start_pitch": "A4",
+            "last_occupied_pitch": "E7",
+            "score": 65.75269339212775,
+            "phase_seconds": 21.057005332385355
+          },
+          {
+            "start_pitch": "C2",
+            "last_occupied_pitch": "G4",
+            "score": 64.38639408009344,
+            "phase_seconds": 20.327109136153574
+          },
+          {
+            "start_pitch": "G4",
+            "last_occupied_pitch": "D7",
+            "score": 63.585440199407245,
+            "phase_seconds": 2.799601848560256
+          },
+          {
+            "start_pitch": "D4",
+            "last_occupied_pitch": "A6",
+            "score": 61.53065173762946,
+            "phase_seconds": 14.757901173124777
+          },
+          {
+            "start_pitch": "B2",
+            "last_occupied_pitch": "F5",
+            "score": 60.498823820664825,
+            "phase_seconds": 21.42695271951653
+          },
+          {
+            "start_pitch": "F3",
+            "last_occupied_pitch": "C6",
+            "score": 60.12084567473476,
+            "phase_seconds": 11.618347671525063
+          },
+          {
+            "start_pitch": "G2",
+            "last_occupied_pitch": "D5",
+            "score": 59.96169321050343,
+            "phase_seconds": 14.677912548880201
+          },
+          {
+            "start_pitch": "B4",
+            "last_occupied_pitch": "F7",
+            "score": 56.05144874655572,
+            "phase_seconds": 26.17627728403839
+          },
+          {
+            "start_pitch": "D3",
+            "last_occupied_pitch": "A5",
+            "score": 53.20777478645453,
+            "phase_seconds": 11.30839175257732
+          },
+          {
+            "start_pitch": "F4",
+            "last_occupied_pitch": "C7",
+            "score": 49.226762813940155,
+            "phase_seconds": 21.41695414148596
+          }
+        ]
+      }
+    ],
+    "assumptions": "consecutive white keys, increasing outward, clockwise chronological hole order; 19 occupied tracks",
+    "limits": "descriptive scores with freely fitted phase; octave alternatives can respond to harmonics; not isolated per-tine measurements; track 20 absent from reference"
+  }
+}

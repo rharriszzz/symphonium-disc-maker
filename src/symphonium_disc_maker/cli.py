@@ -6,7 +6,7 @@ from .geometry import load_geometry
 from .arrangement import load_arrangement, normalize_arrangement, validate_minimum_same_track_gap
 from .svg import write_svg
 from .dxf import write_dxf
-from .labels import write_label_sheet_svg
+from .labels import write_label_sheet_svg, write_label_sheet_pdf
 
 def _common(parser):
     parser.add_argument("arrangement", help="Arrangement JSON file")
@@ -31,7 +31,7 @@ def main(argv=None):
     _common(p_val)
     p_val.add_argument("--same-track-gap", type=float, default=0.0)
 
-    p_label = sub.add_parser("labels", help="Generate a printable/cuttable label sheet SVG")
+    p_label = sub.add_parser("labels", help="Generate a label sheet SVG or printable PDF")
     p_label.add_argument("--title", required=True)
     p_label.add_argument("--subtitle", default="")
     p_label.add_argument("-o", "--output", required=True)
@@ -41,6 +41,7 @@ def main(argv=None):
     p_label.add_argument("--columns", type=int, default=4)
     p_label.add_argument("--rows", type=int, default=5)
     p_label.add_argument("--mode", choices=("combined", "print", "cut"), default="combined")
+    p_label.add_argument("--calibration", action="store_true", help="Add a one-inch ruler to a paper-test PDF")
 
     args = p.parse_args(argv)
 
@@ -50,8 +51,12 @@ def main(argv=None):
         maximum = 2 * (ns["inner_track_center_radius"] - ns["note_hole_diameter"] / 2)
         if not math.isfinite(args.diameter) or args.diameter >= maximum:
             p.error(f"label diameter must be smaller than {maximum:.5f} in to stay clear of note holes")
+        pdf = Path(args.output).suffix.lower() == ".pdf"
+        if args.calibration and not pdf:
+            p.error("--calibration is available for PDF output")
         try:
-            write_label_sheet_svg(
+            writer = write_label_sheet_pdf if pdf else write_label_sheet_svg
+            writer(
                 args.output,
                 args.title,
                 args.subtitle,
@@ -61,6 +66,7 @@ def main(argv=None):
                 columns=args.columns,
                 rows=args.rows,
                 mode=args.mode,
+                **({"calibration": args.calibration} if pdf else {}),
             )
         except ValueError as exc:
             p.error(str(exc))

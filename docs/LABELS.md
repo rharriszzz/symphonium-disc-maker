@@ -15,6 +15,12 @@ test should establish the final label opening.
 
 ## Generate printing artwork and cutting outlines
 
+The ready-to-print [paper fitting PDF](../prototype_pack/label_fit_test.pdf)
+has a US Letter page, 20 labels, and a one-inch calibration ruler. It can be
+printed from Windows 11 or a Mac and hand-cut while the Gazelle connection
+is unresolved. The [printing PDF](../prototype_pack/labels_print.pdf) contains
+only label text. Both are in [the prepared prototype pack](../prototype_pack/README.md).
+
 Run these commands from the repository root. All three sheets share the same
 20-label layout on US Letter paper. Text sits above and below the center hole.
 Long lines use a smaller font; inspect them before printing.
@@ -30,6 +36,23 @@ PYTHONPATH=src python3 -m symphonium_disc_maker.cli labels --title PACHELBEL --s
 - **Print** contains only the text. There are no printed cut lines.
 - **Cut** contains only the outer circles and center holes. Import this for
   cutting outlines, so the cutter does not cut the letters.
+
+For a new PDF, install the optional printing dependencies and use a `.pdf`
+output filename:
+
+```bash
+pip install -e '.[print]'
+PYTHONPATH=src python3 -m symphonium_disc_maker.cli labels --title PACHELBEL --subtitle "20-tine sampler" --calibration -o output/label_fit_test.pdf
+PYTHONPATH=src python3 -m symphonium_disc_maker.cli labels --title PACHELBEL --subtitle "20-tine sampler" --mode print -o output/labels_print.pdf
+```
+
+PDF and SVG share the same layout calculations and physical dimensions.
+PDF embeds DejaVu Sans for portable text rendering; SVG requests Arial or a
+sans-serif fallback. The paper-test PDF adds the ruler and printing instructions
+outside the label positions. `--calibration` is a PDF-only option. A raster
+verification at 144 dpi confirms the 1.50-inch circle and one-inch ruler; the
+PDF page is exactly 612 × 792 points. Printer settings still determine the
+physical result, so measure the printed ruler before fitting a label.
 
 `--rows`, `--columns`, `--diameter`, and `--center-hole` are adjustable.
 This is a layout for full-sheet adhesive stock, not a verified template for

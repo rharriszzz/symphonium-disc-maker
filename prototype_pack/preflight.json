@@ -1,0 +1,55 @@
+{
+  "status": "nominal CAD has positive clearances; supplier process and fit unverified",
+  "units": "inch",
+  "disc_diameter_in": 7.0,
+  "expected_dxf_counts": {
+    "CIRCLE": 22,
+    "LINE": 572
+  },
+  "drive_openings": 143,
+  "music_holes": 20,
+  "tracks_present": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "clearances_in": {
+    "drive_to_drive": 0.05601713975756709,
+    "drive_to_outer_edge": 0.07670421961525431,
+    "drive_to_center_hole": 3.2249999999999996,
+    "music_to_drive": 0.07485901778729559,
+    "music_to_outer_edge": 0.2518210000000005,
+    "music_to_center_hole": 0.7936799999999999,
+    "label_to_innermost_possible_music_hole": 0.14167999999999992,
+    "music_to_music": 0.22037915210087528
+  },
+  "clearances_mm": {
+    "drive_to_drive": 1.4228353498422042,
+    "drive_to_outer_edge": 1.9482871782274593,
+    "drive_to_center_hole": 81.91499999999999,
+    "music_to_drive": 1.901419051797308,
+    "music_to_outer_edge": 6.396253400000012,
+    "music_to_center_hole": 20.159471999999997,
+    "label_to_innermost_possible_music_hole": 3.598671999999998,
+    "music_to_music": 5.597630463362232
+  },
+  "minimum_attack_gap_seconds": 1.406299999999998,
+  "limits": "nominal 2D geometry only; excludes kerf, tolerances, corner rounding, thickness, post seating and tine reset/decay"
+}

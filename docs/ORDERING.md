@@ -5,6 +5,21 @@ Prepare a small test order from each company using the same Pachelbel
 and pricing; supplier material, process, and tolerances still need confirmation.
 No quote has been submitted and no order has been placed.
 
+The [prepared prototype pack](../prototype_pack/README.md) now contains the
+[cutting DXF](../prototype_pack/pachelbel_cut_mm.dxf), an annotated preview,
+supplier-specific inquiry drafts, label PDFs/SVGs, and a recording sequence.
+Its manifest records source and artifact hashes. The nominal preflight finds
+positive clearances throughout, including 0.07486 inch from music holes to
+drive openings and 0.22038 inch between the closest music holes. It does not
+establish supplier process feasibility or mechanical fit.
+
+Regenerate the pack after changing inputs or exporter code:
+
+```bash
+pip install -e '.[print]'
+PYTHONPATH=src python3 scripts/build_prototype_pack.py --output prototype_pack
+```
+
 Supplier information below was checked on October 1, 2026. The repository
 contains [the conversation handoff](CODEX_HANDOFF.md), measurement notes, and
 [an independent scan/audio check](REFERENCE_CHECK.md). The original scan and
@@ -172,8 +187,10 @@ PETG at 0.020 inch"** for Xometry, or **"Please quote clear polypropylene at
 4. On receipt, check flatness, thickness, hole dimensions, and whether the
    material flexes over the post and seats like the original without forcing
    it. Confirm the top face and first test playback without a label.
-5. Record the 20 isolated tine attacks, noting which supplier and material
-   produced each disk. Use that evidence to refine the pitch map and geometry.
+5. Record at least two revolutions and identify each supplier/material.
+   Follow `prototype_pack/recording_sequence.csv` to check all 20 tines.
+   Attacks are 1.4063 seconds apart; acoustic decay may overlap. Use the
+   recording to refine the pitch map and geometry, especially inferred track 20.
 
 | Supplier | Material and thickness | Quantity | Delivered price | Quote status |
 | --- | --- | --- | --- | --- |

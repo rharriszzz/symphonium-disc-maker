@@ -1,0 +1,22 @@
+DRAFT ONLY - not submitted
+
+Please quote one replacement plastic music disk, with an optional price for two,
+for a Mr. Christmas Animated Holiday Symphonium 140-24021.
+Please quote clear PETG at 0.020 inch; confirm the actual stock and process.
+The original polymer is unknown, and the original thickness is 0.020 inch.
+
+Attached cutting file: pachelbel_cut_mm.dxf, at 1:1 scale in millimeters.
+Outside diameter: 177.8000 mm.
+Center hole: 4.9784 mm, matching the working original.
+Drive openings: 143 rectangles, 2.5400 mm radial by 2.2860 mm tangential.
+Their axes rotate with position around the ring.
+Music holes: 20 circles, 2.9464 mm diameter.
+Minimum drive-to-drive bridge: 1.4228 mm.
+Minimum drive-corner clearance to outside edge: 1.9483 mm.
+
+Please confirm achievable finished hole dimensions, cutting tolerances, internal
+corner rounding and minimum bridges. The disk must remain flat, engage drive pins
+and pluckers, and flex over a possibly wider rounded center retainer. The seating
+profile is not measured. Please flag required geometry or material changes before
+cutting and identify any thickness-clearance concern. Include shipping and all
+setup or tooling fees. This is a prototype feasibility request; fit is untested.

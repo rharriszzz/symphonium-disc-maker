@@ -1,0 +1,83 @@
+{
+  "status": "prepared prototype files; no quote submitted; no order placed",
+  "units_dxf": "millimeter",
+  "view": "top_printed_face",
+  "start_angle_degrees": 230,
+  "inputs": {
+    "geometry": {
+      "path": "geometry.json",
+      "sha256": "d305e36dab71aba13cea9222b67958e961b235d77c5ba53d873ac0e8c001b0cd"
+    },
+    "arrangement": {
+      "path": "examples/pachelbel_sampler.json",
+      "sha256": "ba70030defdd053ef057fe0fbe2d540403c34042e1a4b08463fa1a2d531cc4b7"
+    }
+  },
+  "generator_sources": {
+    "scripts/build_prototype_pack.py": "4ef33055efd9327a7bd5cc3729e63f1da0e8567f46bce7bdf0e5d6b72dcbf24a",
+    "src/symphonium_disc_maker/arrangement.py": "a0431f9bedf7ac1821f37aa7a65b12f7ce3f17c10ebad9884bf6311a0b31f5c2",
+    "src/symphonium_disc_maker/dxf.py": "5fd48a84e3525b53a5c907f6cfd36ab76ac20b4066ebce194b6b5c2d57c0f3d0",
+    "src/symphonium_disc_maker/geometry.py": "94ba3391b40e098ade78a402df08ef35cde0ded682d6bd5694c866f86553c4ef",
+    "src/symphonium_disc_maker/labels.py": "b9eb273631e3e8681af7ebe77ff80bfa53deecff6a378e9908be53e809ee096b",
+    "src/symphonium_disc_maker/preflight.py": "6ffb70375393fc5952a9a59d17fcfae590fe5705581258e0aa7837c3def80593",
+    "src/symphonium_disc_maker/svg.py": "057ac301af79558710c70c42ffef7fd3f396efd67216abef87b80c51356a521a"
+  },
+  "files": {
+    "geometry.json": {
+      "sha256": "d305e36dab71aba13cea9222b67958e961b235d77c5ba53d873ac0e8c001b0cd",
+      "bytes": 2930
+    },
+    "arrangement.json": {
+      "sha256": "ba70030defdd053ef057fe0fbe2d540403c34042e1a4b08463fa1a2d531cc4b7",
+      "bytes": 2316
+    },
+    "pachelbel_cut_mm.dxf": {
+      "sha256": "a68c413852c94faf9cfcc2da234ae1fbc83aa5f85b2bba36c7722852fbf6eb09",
+      "bytes": 47569
+    },
+    "pachelbel_preview.svg": {
+      "sha256": "e1b200a296a84aacdb21660cc5efbe10b0522889bf65b9e503182403d0268fe1",
+      "bytes": 18915
+    },
+    "labels_combined.svg": {
+      "sha256": "8988d53f03d483a63bbb53fa27475697ef534f840e6b87854fdc2ec13fd8ec5e",
+      "bytes": 5022
+    },
+    "labels_print.svg": {
+      "sha256": "31ab6774a9e871928b6de4dbe69c57b17f57aa682c6b430abc558c706efb9089",
+      "bytes": 2724
+    },
+    "labels_cut.svg": {
+      "sha256": "99607b14315ec9d2b35d50e31b20aef11f0135e20ee27b174a75fb928f556710",
+      "bytes": 2560
+    },
+    "label_fit_test.pdf": {
+      "sha256": "ae788179656abff6328e8fcd3c4e22c1f7d5d4b647fd8df74877af9b2dd8d349",
+      "bytes": 19996
+    },
+    "labels_print.pdf": {
+      "sha256": "7eaa65f807080dc46ed8abea9fa7c1bf5ed2e145898b8b1e37c2177d1eaeab95",
+      "bytes": 10653
+    },
+    "preflight.json": {
+      "sha256": "94f2154dffee0cc649bf07a0cb0ad0904cb53b04369b6038084869323d37b710",
+      "bytes": 1421
+    },
+    "xometry_inquiry.txt": {
+      "sha256": "c8cc8cd5338cfe580e6753d3bce91300963c5a2c40fab5abdf38604b137d27d2",
+      "bytes": 1238
+    },
+    "sendcutsend_inquiry.txt": {
+      "sha256": "fcd81fe41cee4fcbfd81a9bd7bad2ac3fc273e537f9d92d2c5a5cec228def879",
+      "bytes": 1273
+    },
+    "recording_sequence.csv": {
+      "sha256": "17ffbde59d804e37f7003220a713803c463bf1be0c19dfccf9cd32ceccbf7d26",
+      "bytes": 1528
+    },
+    "README.md": {
+      "sha256": "d7ed905b8aac5ef386eba1c7d65865b451769e86ef5f69ca41e3e59cb5af1a00",
+      "bytes": 3050
+    }
+  }
+}

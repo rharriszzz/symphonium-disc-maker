@@ -134,6 +134,16 @@ against the innermost music holes and reads the center hole from `geometry.json`
 See [the label workflow and Gazelle findings](docs/LABELS.md) for examples,
 alignment limitations, and the CUTOK driver investigation.
 
+A [printable fitting PDF](prototype_pack/label_fit_test.pdf) is ready for a
+plain-paper test at 100% scale. It has a one-inch calibration ruler and
+1.50-inch circles. The [prototype pack](prototype_pack/README.md) also contains
+the cutting DXF and supplier drafts. These files are prepared for review;
+supplier quotes and physical fit are still pending.
+
+To make PDF labels, install `pip install -e '.[print]'` and choose a `.pdf`
+output filename. Add `--calibration` for a paper fitting test. SVG and DXF
+exporting still need no third-party runtime dependencies.
+
 ## Manufacturing notes
 
 For services such as SendCutSend or Xometry:
@@ -168,6 +178,10 @@ Opposite-quadrant edge comparisons distinguish scanner shadows from the
 slightly rectangular openings and supply the current prototype dimensions.
 Optional analysis dependencies can be installed with `pip install -e '.[analysis]'`.
 
+The follow-up checks align all 143 drive openings and compare 22 starting
+pitches. The rectangular shape and global C4–G6 occupied-track map hold across
+the independent checks; track 20's A6 remains inferred until the sampler plays it.
+
 ## Next steps
 
 - test the scan-derived radial and tangential drive-hole sizes on a prototype;
@@ -175,7 +189,7 @@ Optional analysis dependencies can be installed with `pip install -e '.[analysis
 - record isolated real tines;
 - refine the playable pitch map and rotation timing;
 - add MIDI/MusicXML import and arranging helpers;
-- add PDF preview output;
+- add disk PDF previews;
 - add optional registration marks for print-and-cut label workflows.
 
 ## License

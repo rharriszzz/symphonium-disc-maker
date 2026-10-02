@@ -135,8 +135,17 @@ C4 D4 E4 F4 G4 A4 B4
 C5 D5 E5 F5 G5 A5 B5
 C6 D6 E6 F6 G6 A6
 
-This map is good enough for arranging experiments but should be confirmed
-with a deliberately sparse sampler disc.
+An independent search over 22 consecutive-white-key maps starting from C2
+through C5 ranks **C4** first with two FFT sizes, fundamental-only and
+harmonic-weighted evidence, and separate first/second-revolution checks.
+See [the comparison and its assumptions](REFERENCE_CHECK.md).
+
+The evidence supports the global C4–G6 occupied-track mapping, rather than
+independently measuring each tine. Tracks 18–19 have only one reference attack
+each. Track 20's A6 is inferred: the original disk never plays it. Keep the
+working map and test every track on the sampler. Its 1.4063-second attack gaps
+may still contain overlapping acoustic decay, so it is not guaranteed to
+produce a clean isolated sample for each tine.
 
 ## Timing
 

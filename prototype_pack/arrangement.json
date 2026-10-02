@@ -1,0 +1,128 @@
+{
+  "title": "Pachelbel Canon \u2014 20-Tine Sampler Loop",
+  "composer": "after Johann Pachelbel",
+  "description": "Sparse loop intended both as music and as a future isolated-tine recording disc.",
+  "revolution_seconds": 28.126,
+  "events": [
+    {
+      "time_seconds": 0.0,
+      "note": "C6",
+      "track": 15,
+      "harmony": "C"
+    },
+    {
+      "time_seconds": 1.4063,
+      "note": "G5",
+      "track": 12,
+      "harmony": "C"
+    },
+    {
+      "time_seconds": 2.8126,
+      "note": "E5",
+      "track": 10,
+      "harmony": "C"
+    },
+    {
+      "time_seconds": 4.2189,
+      "note": "D5",
+      "track": 9,
+      "harmony": "G"
+    },
+    {
+      "time_seconds": 5.6252,
+      "note": "D4",
+      "track": 2,
+      "harmony": "G"
+    },
+    {
+      "time_seconds": 7.0315,
+      "note": "C4",
+      "track": 1,
+      "harmony": "Am"
+    },
+    {
+      "time_seconds": 8.4378,
+      "note": "E4",
+      "track": 3,
+      "harmony": "Am"
+    },
+    {
+      "time_seconds": 9.8441,
+      "note": "A4",
+      "track": 6,
+      "harmony": "Am"
+    },
+    {
+      "time_seconds": 11.2504,
+      "note": "B4",
+      "track": 7,
+      "harmony": "Em"
+    },
+    {
+      "time_seconds": 12.6567,
+      "note": "G4",
+      "track": 5,
+      "harmony": "Em"
+    },
+    {
+      "time_seconds": 14.063,
+      "note": "F4",
+      "track": 4,
+      "harmony": "F"
+    },
+    {
+      "time_seconds": 15.4693,
+      "note": "C5",
+      "track": 8,
+      "harmony": "F"
+    },
+    {
+      "time_seconds": 16.8756,
+      "note": "F5",
+      "track": 11,
+      "harmony": "F"
+    },
+    {
+      "time_seconds": 18.2819,
+      "note": "E6",
+      "track": 17,
+      "harmony": "C"
+    },
+    {
+      "time_seconds": 19.6882,
+      "note": "G6",
+      "track": 19,
+      "harmony": "C"
+    },
+    {
+      "time_seconds": 21.0945,
+      "note": "A6",
+      "track": 20,
+      "harmony": "F"
+    },
+    {
+      "time_seconds": 22.5008,
+      "note": "F6",
+      "track": 18,
+      "harmony": "F"
+    },
+    {
+      "time_seconds": 23.9071,
+      "note": "A5",
+      "track": 13,
+      "harmony": "F"
+    },
+    {
+      "time_seconds": 25.3134,
+      "note": "B5",
+      "track": 14,
+      "harmony": "G"
+    },
+    {
+      "time_seconds": 26.7197,
+      "note": "D6",
+      "track": 16,
+      "harmony": "G"
+    }
+  ]
+}

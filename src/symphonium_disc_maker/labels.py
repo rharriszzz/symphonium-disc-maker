@@ -3,7 +3,7 @@ from pathlib import Path
 import html
 import math
 
-def build_label_sheet_svg(
+def _label_layout(
     title: str,
     subtitle: str = "",
     *,
@@ -14,7 +14,7 @@ def build_label_sheet_svg(
     page_width_in: float = 8.5,
     page_height_in: float = 11.0,
     mode: str = "combined",
-) -> str:
+) -> dict:
     if mode not in {"combined", "print", "cut"}:
         raise ValueError("mode must be combined, print, or cut")
     for name, value in (
@@ -52,26 +52,36 @@ def build_label_sheet_svg(
     title_size = font_size(title, title_y, 0.12) if title and mode != "cut" else 0.12
     sub_size = font_size(subtitle, sub_y, 0.075) if subtitle and mode != "cut" else 0.075
 
+    return {
+        "width": page_width_in, "height": page_height_in, "mode": mode,
+        "radius": r, "hole_radius": hr, "title_y": title_y, "subtitle_y": sub_y,
+        "title_size": title_size, "subtitle_size": sub_size,
+        "centers": [(margin_x + (col + .5) * dx, margin_y + (row + .5) * dy)
+                    for row in range(rows) for col in range(columns)],
+    }
+
+
+def build_label_sheet_svg(title: str, subtitle: str = "", **kwargs) -> str:
+    layout = _label_layout(title, subtitle, **kwargs)
+    mode = layout["mode"]
+
     out = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{page_width_in}in" '
-        f'height="{page_height_in}in" viewBox="0 0 {page_width_in} {page_height_in}">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{layout["width"]}in" '
+        f'height="{layout["height"]}in" viewBox="0 0 {layout["width"]} {layout["height"]}">',
         '<style>.cut{fill:none;stroke:#000;stroke-width:0.006}'
-        f'.title{{font:bold {title_size:.6f}px Arial;text-anchor:middle}}'
-        f'.sub{{font:{sub_size:.6f}px Arial;text-anchor:middle}}</style>'
+        f'.title{{font:bold {layout["title_size"]:.6f}px Arial;text-anchor:middle}}'
+        f'.sub{{font:{layout["subtitle_size"]:.6f}px Arial;text-anchor:middle}}</style>'
     ]
 
     cuts = ['<g id="cut">']
     artwork = ['<g id="artwork">']
-    for row in range(rows):
-        for col in range(columns):
-            cx = margin_x + (col+0.5)*dx
-            cy = margin_y + (row+0.5)*dy
-            cuts.append(f'<circle class="cut" cx="{cx:.4f}" cy="{cy:.4f}" r="{r:.4f}"/>')
-            if hr:
-                cuts.append(f'<circle class="cut" cx="{cx:.4f}" cy="{cy:.4f}" r="{hr:.4f}"/>')
-            artwork.append(f'<text class="title" x="{cx:.4f}" y="{cy+title_y:.4f}">{html.escape(title)}</text>')
-            if subtitle:
-                artwork.append(f'<text class="sub" x="{cx:.4f}" y="{cy+sub_y:.4f}">{html.escape(subtitle)}</text>')
+    for cx, cy in layout["centers"]:
+        cuts.append(f'<circle class="cut" cx="{cx:.4f}" cy="{cy:.4f}" r="{layout["radius"]:.4f}"/>')
+        if layout["hole_radius"]:
+            cuts.append(f'<circle class="cut" cx="{cx:.4f}" cy="{cy:.4f}" r="{layout["hole_radius"]:.4f}"/>')
+        artwork.append(f'<text class="title" x="{cx:.4f}" y="{cy+layout["title_y"]:.4f}">{html.escape(title)}</text>')
+        if subtitle:
+            artwork.append(f'<text class="sub" x="{cx:.4f}" y="{cy+layout["subtitle_y"]:.4f}">{html.escape(subtitle)}</text>')
     if mode != "print":
         out.extend(cuts + ['</g>'])
     if mode != "cut":
@@ -84,3 +94,54 @@ def write_label_sheet_svg(path: str | Path, title: str, subtitle: str = "", **kw
         build_label_sheet_svg(title, subtitle, **kwargs),
         encoding="utf-8"
     )
+
+
+def build_label_sheet_pdf(title: str, subtitle: str = "", *, calibration=False, **kwargs) -> bytes:
+    """Vector PDF at physical page size using the same layout as the SVG.
+
+    Matplotlib is optional and imported only for PDF output. Calibration adds
+    a one-inch ruler and printing instructions outside the label positions.
+    """
+    import io
+    try:
+        from matplotlib.backends.backend_pdf import FigureCanvasPdf
+        from matplotlib.figure import Figure
+        from matplotlib.patches import Circle
+    except ImportError as exc:
+        raise ValueError("PDF output needs Matplotlib; install this project with pip install -e '.[print]'") from exc
+    layout = _label_layout(title, subtitle, **kwargs)
+    width, height = layout["width"], layout["height"]
+    if calibration and (width < 3 or height < 3):
+        raise ValueError("calibration ruler requires a page at least 3 inches wide and tall")
+    figure = Figure(figsize=(width, height))
+    axes = figure.add_axes([0, 0, 1, 1], xlim=(0, width), ylim=(0, height))
+    axes.set_axis_off()
+    for cx, cy in layout["centers"]:
+        cy = height - cy
+        if layout["mode"] != "print":
+            for radius in (layout["radius"], layout["hole_radius"]):
+                if radius:
+                    axes.add_patch(Circle((cx, cy), radius, fill=False, edgecolor="black", linewidth=.006*72))
+        if layout["mode"] != "cut":
+            axes.text(cx, cy - layout["title_y"], title, ha="center", va="baseline",
+                      family="DejaVu Sans", weight="bold", fontsize=layout["title_size"]*72,
+                      parse_math=False, usetex=False)
+            if subtitle:
+                axes.text(cx, cy - layout["subtitle_y"], subtitle, ha="center", va="baseline",
+                          family="DejaVu Sans", fontsize=layout["subtitle_size"]*72,
+                          parse_math=False, usetex=False)
+    if calibration:
+        axes.text(width/2, height-.4, "Print at actual size / 100%. Disable Fit or Shrink.",
+                  ha="center", va="baseline", fontsize=8, family="DejaVu Sans")
+        axes.plot([.6, 1.6], [.35, .35], color="black", linewidth=.7)
+        for x in (.6, 1.6):
+            axes.plot([x, x], [.29, .41], color="black", linewidth=.7)
+        axes.text(1.1, .48, "1 inch / 25.4 mm", ha="center", va="baseline", fontsize=7,
+                  family="DejaVu Sans")
+    stream = io.BytesIO()
+    FigureCanvasPdf(figure).print_pdf(stream, metadata={"Title": title, "CreationDate": None, "ModDate": None})
+    return stream.getvalue()
+
+
+def write_label_sheet_pdf(path: str | Path, title: str, subtitle: str = "", **kwargs):
+    Path(path).write_bytes(build_label_sheet_pdf(title, subtitle, **kwargs))

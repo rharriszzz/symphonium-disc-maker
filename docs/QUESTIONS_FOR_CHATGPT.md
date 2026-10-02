@@ -144,3 +144,26 @@ not match these attachments. **Was the intended unobstructed center-post
 photograph omitted or given another filename?** Please provide that existing
 image if available and correct the photo descriptions. The current 0.196-inch
 prototype center hole remains unchanged.
+
+## Local verification completed after the response
+
+The independent checks now reproduce the main shape and pitch-map conclusions:
+
+- The fresh 143-hole aligned average gives an aspect ratio of 1.1238 at
+  threshold 150; your supplied CSV gives 1.1250. Outer ellipse axis differences
+  are 0.0937–0.1139% over three boundary thresholds.
+- Among 22 consecutive-white-key starts from C2 through C5, C4 ranks first
+  with 4096/8192-sample FFTs, with or without harmonic weighting, and in both
+  complete recorded revolutions separately. It also wins when the second
+  revolution is evaluated at phases fitted to the first.
+- The map remains a global hypothesis under the consecutive-white-key
+  assumption; track 20's A6 is inferred rather than independently heard.
+- The prototype pack includes cutting geometry, supplier drafts, nominal
+  clearance checks, recording order, and physical-size label PDFs.
+- Sampler attacks are 1.4063 seconds apart. They may have overlapping decay,
+  so please avoid describing them as guaranteed isolated clean tine samples.
+
+The [methods and full results](REFERENCE_CHECK.md) and
+[prototype pack](../prototype_pack/README.md) are committed. No further general
+summary is needed. The outstanding useful artifact remains the correctly
+identified unobstructed center-post photograph, if it exists.

@@ -22,8 +22,9 @@ The subsequent [ChatGPT response](CHATGPT_RESPONSE.md) and its
 [aligned-drive profile CSV](data/aligned_drive_profiles.csv) were imported
 unchanged from `CHATGPT_RESPONSE_SYMPHONIUM.zip`. Both downloaded Markdown
 copies and the archive's Markdown member were byte-identical. The response
-reports a separate ensemble shape check and pitch-map comparison; those
-additional analyses have not been reproduced locally. Its four photos are
+reports a separate ensemble shape check and pitch-map comparison. Both have
+now been checked independently with the original scan and recording, as
+described below. Its four photos are
 stored locally under `reference_material/`, with source hashes in
 `reference_material/chatgpt_response_import.json`. Several photo descriptions
 do not match the attachments; see the follow-up in
@@ -123,6 +124,38 @@ A compact copy is retained with these notes; the full analysis output remains
 local. `report.json` records the group
 measurements, smoothing checks, and selected pair separations.
 
+## Independent ensemble and ellipse checks
+
+`scripts/verify_response.py` aligns all 143 openings into radial/tangential
+coordinates and averages their grayscale patches. A fixed scanner shadow
+rotates through local directions while the opening shape reinforces. Central
+profile crossings give:
+
+| Brightness threshold | Local radial width, pixels | Local tangential width, pixels | Local aspect ratio | Supplied CSV aspect ratio |
+| --- | ---: | ---: | ---: | ---: |
+| 130 | 55.292 | 49.565 | 1.1155 | 1.1151 |
+| 150 | 53.788 | 47.861 | **1.1238** | **1.1250** |
+| 170 | 52.529 | 46.200 | 1.1370 | 1.1370 |
+| 190 | 51.174 | 44.736 | 1.1439 | 1.1497 |
+
+The supplied CSV reproduces the threshold widths stated in the response.
+Our fresh average gives closely agreeing shape ratios; absolute crossings
+differ slightly with centering and detection choices. The crossing calculation
+uses only the connected bright region containing zero. Neighboring drive
+openings and outside paper at the profile ends do not enlarge the measured span.
+These are bright-interior measurements, so retain the across-shadow dimensions
+as the better basis for absolute prototype cut size.
+
+A general conic ellipse fit to the outer boundary gives axis differences of
+**0.0937%, 0.1091%, and 0.1139%** at disk thresholds 140, 160, and 180.
+This agrees with the response's approximately 0.1% result, far smaller than
+the approximately 12% opening aspect difference. The small ellipse difference
+combines physical disk shape and scanner scale; it does not isolate either.
+
+See [the averaged openings and overlaid profiles](figures/drive_ensemble.png).
+The full results and input fingerprints are retained in
+[the verification report](data/response_verification.json).
+
 ## Music-hole size limits
 
 The detected music-hole area corresponds to a median circular diameter of
@@ -162,6 +195,44 @@ direction, not an exact new revolution period. The best recording phase near
 21.107 seconds includes the loose disk's scan orientation and recording start;
 it is not a mechanical reader angle. The CAD default 230° remains arbitrary.
 
+## Independent pitch-map comparison
+
+The new check searches **22 starting white keys from C2 through C5**, each
+followed by consecutive white keys increasing outward. It retains the already
+supported decreasing-angle chronology and 28.126-second period. It computes
+pitch-specific positive log-energy changes at 24 kHz, folds them into 10 ms
+phase bins, and searches recording phase. Two FFT windows (4096 and 8192
+samples) and two frequency-evidence choices test sensitivity:
+
+| FFT samples | Frequency evidence | Best start | Score | Next start | Next score |
+| --- | --- | --- | ---: | --- | ---: |
+| 4096 | Fundamental only | **C4** | 279.0 | A3 | 161.8 |
+| 4096 | Fundamental plus weaker harmonics | **C4** | 261.7 | C3 | 199.8 |
+| 8192 | Fundamental only | **C4** | 302.2 | A3 | 169.1 |
+| 8192 | Fundamental plus weaker harmonics | **C4** | 265.5 | C3 | 196.1 |
+
+C4 also ranks first when the first and second complete recording revolutions
+are analyzed separately in all four configurations. A further check fits
+each candidate's phase on the first revolution and evaluates the second
+revolution **at that fixed training phase**. C4 again has the highest held-out
+score in each configuration. Later partial-revolution audio is excluded from
+those separate-revolution checks.
+
+This independently supports **C4 through G6 on occupied tracks 1–19** under
+the consecutive-white-key assumption. It is not an independent isolated
+measurement of every tine. Tracks 18 and 19 have only one reference attack
+each; track 20 has none, so **A6 remains inferred by continuation**.
+`geometry.json` now records that provenance explicitly without changing pitches.
+
+Octave alternatives receive some harmonic evidence, which is why the
+fundamental-only comparison is useful. Scores are descriptive, not probabilities
+or calibrated significance. They do not test arbitrary per-track tuning or
+non-diatonic maps, and their magnitude depends on analysis settings. The other
+AI's different numeric scores need not match these to support the same ranking.
+
+See [the primary candidate comparison](figures/pitch_map_candidates.png) and
+[all rankings and separate-revolution checks](data/response_verification.json).
+
 ## Reproduce the check
 
 The production exporters still have no third-party runtime dependencies.
@@ -178,6 +249,19 @@ MPLCONFIGDIR=/tmp/symphonium-matplotlib PYTHONPATH=src python3 scripts/check_ref
 Omit `--audio` for a scan-only run. `--disc-threshold`, `--hole-thresholds`,
 `--geometry`, and `--output` are adjustable. The first hole threshold supplies
 the overlay and audio-hole positions; the remaining thresholds check sensitivity.
+
+Reproduce the independent response checks with:
+
+```bash
+MPLCONFIGDIR=/tmp/symphonium-matplotlib PYTHONPATH=src python3 scripts/verify_response.py \
+  --scan /mnt/c/Users/rharr/OneDrive/Documents/img20261001_00272891.png \
+  --audio '/mnt/c/Users/rharr/Downloads/116 E Main St 15.m4a'
+```
+
+This writes averaged-hole profiles, figures, candidate scores, a decoded audio
+copy, and a full report under `output/response_check/`. The committed report
+records the scan, audio, geometry, script, and supplied CSV fingerprints. The
+original supporting files remain unchanged and outside Git.
 
 Generated files in `output/reference_check/` include:
 

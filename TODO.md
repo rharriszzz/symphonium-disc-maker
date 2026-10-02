@@ -7,6 +7,8 @@
 - [x] Reproduce scan analysis locally and check a calibrated geometry overlay.
 - [x] Apply follow-up convention: top-face CAD, clockwise chronological holes, arbitrary 230-degree start phase.
 - [x] Independently reproduce reported scan/audio playback-direction result.
+- [x] Independently check the supplied 143-hole ensemble and outer-boundary ellipse results.
+- [x] Compare 22 pitch maps with fundamental/harmonic evidence and separate revolutions; mark track 20 inferred.
 - [ ] Test the scan-derived drive-hole dimensions on a manufactured prototype.
 - [ ] Confirm absolute center radius of track 20 after first manufactured sampler.
 - [ ] Record exact disc material and stiffness if identified.
@@ -21,10 +23,11 @@
 
 ## Output
 - [x] Separate label artwork and cutting outlines; reject labels covering note holes.
-- [ ] PDF preview generation.
+- [x] Physical-size label PDFs with a calibration ruler.
+- [ ] Disk PDF preview generation.
 - [ ] Optional construction guides.
 - [ ] Optional label registration marks for BossKut/Silhouette/Cricut.
-- [ ] Generate SendCutSend/Xometry checklist report.
+- [x] Generate SendCutSend/Xometry prototype pack with nominal preflight, source hashes and supplier drafts.
 
 ## Prototype orders and labels
 - [x] Research supplier material options and save draft inquiries in docs/ORDERING.md.

@@ -16,6 +16,7 @@ dependencies = []
 
 [project.optional-dependencies]
 analysis = ["numpy>=1.24", "scipy>=1.10", "Pillow>=9", "matplotlib>=3.6"]
+print = ["matplotlib>=3.6"]
 
 [project.scripts]
 symphonium-disc = "symphonium_disc_maker.cli:main"
