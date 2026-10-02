@@ -1,0 +1,28 @@
+{
+  "CheckedAtUtc": "2026-10-02T03:46:54.6718236Z",
+  "OS": "Microsoft Windows 11 Home",
+  "Build": "26200",
+  "Architecture": "x64",
+  "PresentDeviceCount": 247,
+  "CandidateDevices": [],
+  "MatchingBoundDrivers": [],
+  "InstalledSoftware": [
+    {
+      "DisplayName": "Sure Cuts A Lot 6.085",
+      "DisplayVersion": null,
+      "Publisher": "Craft Edge"
+    }
+  ],
+  "Installer": {
+    "Filename": "SetupSureCutsALot_6_085_64bit.exe",
+    "SHA256": "998F0C97785AB2E41843F464D2A055F931F983B02B6478D3B02578EAFDEAC59B",
+    "SignatureStatus": "Valid",
+    "Signer": "CN=Craft Edge Inc, O=Craft Edge Inc, L=Yorba Linda, C=US",
+    "FileVersion": "6.0.8.5"
+  },
+  "Limits": "Name-based candidates can include other USB printers. No match does not establish driver absence or cutter failure. Disconnected devices and the full driver store are not inventoried.",
+  "SourceScript": {
+    "path": "scripts/inspect_gazelle_windows.ps1",
+    "sha256": "4f3caf8af81cc933fd49eb0af1ad15f8e8bc405d54a6859b4503c4cbbd14e955"
+  }
+}

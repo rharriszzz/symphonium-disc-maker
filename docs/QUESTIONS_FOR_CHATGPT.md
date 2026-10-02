@@ -122,7 +122,9 @@ does not establish Windows 11 driver availability. Please supply the original
 package/source if it exists and distinguish verified OS compatibility from
 an untested suggestion. No working Windows 11 or current Mac connection has
 yet been demonstrated. The latest handoff reports an Apple Silicon Mac;
-Windows architecture and the Mac's OS version remain unknown. CUTOK-hosted
+The [Windows host check](GAZELLE_WINDOWS_CHECK.md) now confirms Windows 11 Home
+x64 and an existing SCAL 6.085 installation; the Mac's OS version remains unknown.
+CUTOK-hosted
 downloads are historical unavailable references, so the current priority is
 Windows enumeration, the SCAL trial, Craft Edge support and Mac fallback.
 
@@ -200,3 +202,15 @@ The [methods and full results](REFERENCE_CHECK.md) and
 summary is needed. The outstanding useful artifact is a surviving Gazelle/CUTOK
 installer or verified download for the user's Windows 11 or Mac workflow.
 The center-post photograph is no longer required.
+
+## Supplier delivery packages prepared
+
+Separate [Xometry](../supplier_packages/xometry_quote.zip) and
+[SendCutSend](../supplier_packages/sendcutsend_quote.zip) packages now contain
+the same audited cutting DXF, a dimensioned reference PDF and tailored quote
+requests. The DXF has 165 closed contours: 143 drive openings and 22 circles.
+The requests ask for the minimum finished center opening through the full
+thickness, drive-hole position tolerances, corner rounding and stock thickness.
+No additional AI response is needed to prepare the first quotes. Supplier
+feasibility and finished-hole tolerance remain open; nothing has been submitted.
+The user will connect the Gazelle later, so cutter work is deferred.

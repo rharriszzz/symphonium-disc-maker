@@ -99,19 +99,21 @@ A current official Windows 11-compatible Gazelle/CUTOK driver download remains
 **unverified**. Use Craft Edge's live downloads and support pages for the active
 setup path.
 
-The handoff says the original Gazelle software has been lost. Useful next steps
-depend on obtaining a driver for the user's **Windows 11** computer. **Windows
-10 is excluded**. A Mac is the fallback if the Windows 11 connection cannot
-be established. The latest handoff reports that the fallback Mac uses Apple
-Silicon; its macOS version, the Windows architecture (x64 or ARM64), and any
-surviving installer backup remain unknown.
+The [Windows host check](GAZELLE_WINDOWS_CHECK.md) now confirms **Windows 11
+Home x64** and an existing **SCAL 6.085** installation. No candidate cutter/USB
+printer appeared in the present-device check; connection and power need to be
+confirmed before deciding that a driver is missing. **Windows 10 is excluded**.
+A Mac is the fallback if the Windows 11 connection cannot be established.
+The latest handoff reports an Apple Silicon Mac; its macOS version and any
+surviving original Gazelle installer remain unknown.
 
 1. Connect and power on the Gazelle to inspect its Windows 11 enumeration in
    Device Manager and Devices and Printers. Record its device name, whether it
    appears as CUTOK/DC330 or an unknown USB device, and hardware IDs. This
    identifies the device; it does not establish that an unknown device can cut.
    Record the Windows architecture and any surviving original installer.
-2. Evaluate the current SCAL 6 trial from Craft Edge. If Windows already has
+2. Use the installed SCAL 6.085 for evaluation; its license/trial status has
+   not been checked. If Windows already has
    a working CUTOK printer driver, use the documented USB / Auto connection
    and try a small scrap-paper circle. Craft Edge's guide expects a driver
    before the cutting connection is made; the enumeration check above is
@@ -120,7 +122,8 @@ surviving installer backup remain unknown.
    [Craft Edge support](https://www.craftedge.com/support/)
    whether they can provide the Gazelle CUTOK driver and confirm support for
    Windows 11 on that architecture. Include the USB device's hardware IDs
-   and model information. The draft below is ready to fill in; it has not been sent.
+   and model information. The [prepared inquiry](CRAFT_EDGE_DRIVER_INQUIRY.md)
+   includes the confirmed Windows architecture and SCAL version; it has not been sent.
 4. If Craft Edge cannot establish a working Windows 11 path, evaluate the
    Apple Silicon Mac using the SCAL trial. Their setup guide says no separate
    Mac driver is needed. Verify actual USB communication and a correctly
@@ -155,7 +158,9 @@ setup workflow:
 
 ## Draft question for Craft Edge
 
-This draft has not been sent. Fill in the computer details first.
+The [current prepared inquiry](CRAFT_EDGE_DRIVER_INQUIRY.md) includes the
+confirmed Windows 11 x64 and SCAL 6.085 details. The generic draft below is
+retained for reference; neither draft has been sent.
 
 > I own a BossKut Gazelle and want to cut small printed paper labels from SVG
 > artwork. My computer runs Windows 11 [x64 or ARM64]. Your Gazelle setup

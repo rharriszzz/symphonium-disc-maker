@@ -1,0 +1,32 @@
+{
+  "status": "prepared; not submitted",
+  "pack_manifest_sha256": "2e2a77d21d8256f81c5318baf53afe18033987110bb5ce4ab2b1c52e918503bb",
+  "generator_sha256": "0e87514438d5e9ea4bc27aff9258e929c2ddff851bdca02740efd4e274f30697",
+  "packages": {
+    "xometry": {
+      "archive": "xometry_quote.zip",
+      "members": {
+        "pachelbel_cut_mm.dxf": "ec4e174329df93d682abef2e0361f3df6db0b5136ccddd760fbc8de70f6110a4",
+        "reference_drawing.pdf": "043772a66c2b4832e99f8c2e1271c5e4adbcef82f72ffc060044dbd8385a9b12",
+        "quote_request.txt": "2042ebd2e6ee37caaa8b91344123db5399fa5d54f25f1bc0cd19b0afd6897947",
+        "README.txt": "9c4f76af83c49c4a94e9c3045a9f8a03f95a1a6e8f34ed91e2cdb64db04742c9"
+      }
+    },
+    "sendcutsend": {
+      "archive": "sendcutsend_quote.zip",
+      "members": {
+        "pachelbel_cut_mm.dxf": "ec4e174329df93d682abef2e0361f3df6db0b5136ccddd760fbc8de70f6110a4",
+        "reference_drawing.pdf": "043772a66c2b4832e99f8c2e1271c5e4adbcef82f72ffc060044dbd8385a9b12",
+        "quote_request.txt": "8d3242b7997673bfd3e369aefa0b4abb6941f0c4061a8c2d88b8452f1f4e2787",
+        "README.txt": "187004db7a859dab859c5801a2bfa0f0d9c8ce7adf4e72ef42ce0ffc277e6a9d"
+      }
+    }
+  },
+  "files": {
+    "reference_drawing.pdf": "043772a66c2b4832e99f8c2e1271c5e4adbcef82f72ffc060044dbd8385a9b12",
+    "cut_file_audit.json": "faa348209f1982bc58847f5ee474ff6130f45027130bb6675a4fb2f0d0ee94f7",
+    "xometry_quote.zip": "1cb342c1162f51757a75a12ba26d00881a6b08a18c64f5602b2631f5e78fc581",
+    "sendcutsend_quote.zip": "ead3df023bd8579f667d89d7634b93b2234fdfdc98aa277a6dc38061655ba9b0",
+    "README.md": "4c2bc9c08e2ebca585558fac26f3a80f05fe3150bb45487991cb5f66ff89ea7c"
+  }
+}

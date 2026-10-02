@@ -1,0 +1,21 @@
+{
+  "status": "exported cut-file checks passed; supplier process/fit unverified",
+  "units": "millimeter",
+  "layers": [
+    "CUT"
+  ],
+  "entity_counts": {
+    "CIRCLE": 22,
+    "LINE": 572
+  },
+  "closed_drive_contours": 143,
+  "drive_edges_per_contour": 4,
+  "circle_contours": 22,
+  "total_closed_contours": 165,
+  "outside_diameter_mm": 177.8,
+  "center_hole_diameter_mm": 5.08,
+  "duplicate_entities": 0,
+  "open_drive_endpoints": 0,
+  "annotation_entities": 0,
+  "limits": "checks this exporter layout, not a general DXF parser or supplier CAM; input preflight separately checks nominal clearances"
+}

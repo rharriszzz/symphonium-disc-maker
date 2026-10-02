@@ -142,6 +142,10 @@ plain-paper test at 100% scale. It has a one-inch calibration ruler and
 1.50-inch circles. The [prototype pack](prototype_pack/README.md) also contains
 the cutting DXF and supplier drafts. These files are prepared for review;
 supplier quotes and physical fit are still pending.
+Separate [Xometry](supplier_packages/xometry_quote.zip) and
+[SendCutSend](supplier_packages/sendcutsend_quote.zip) quote ZIPs now package
+the cutting DXF, a dimensioned reference PDF and each company's request.
+See [the delivery instructions](supplier_packages/README.md).
 
 To make PDF labels, install `pip install -e '.[print]'` and choose a `.pdf`
 output filename. Add `--calibration` for a paper fitting test. SVG and DXF

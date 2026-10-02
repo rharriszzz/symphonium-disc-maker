@@ -5,6 +5,46 @@ Prepare a small test order from each company using the same Pachelbel
 and pricing; supplier material, process, and tolerances still need confirmation.
 No quote has been submitted and no order has been placed.
 
+## Packages ready for supplier review
+
+- [Xometry quote ZIP](../supplier_packages/xometry_quote.zip): request one
+  clear PETG disk at 0.020 inch, with an optional price for two.
+- [SendCutSend quote ZIP](../supplier_packages/sendcutsend_quote.zip): request
+  one clear polypropylene disk at 0.030 inch as the thickness experiment,
+  with an optional price for two.
+- [Dimensioned reference drawing](../supplier_packages/reference_drawing.pdf):
+  geometry and critical dimensions for reviewing both requests.
+
+Each ZIP contains the same `pachelbel_cut_mm.dxf`, a reference PDF, the specific
+supplier's `quote_request.txt`, a short README and file hashes. Extract the ZIP
+before using a portal that expects individual files. Upload **only the DXF as
+manufacturing CAD**, at 1:1 scale in millimeters. Provide the PDF and request
+as supporting material for feasibility review. The PDF is illustrative and
+must not be measured or used as cutting artwork.
+
+The independent [exported-file audit](../supplier_packages/cut_file_audit.json)
+finds 143 separate closed four-edge drive contours and 22 circle contours:
+one perimeter, one center opening and 20 music holes. All 165 contours are on
+the CUT layer, with no duplicate entities or open drive endpoints. The outer
+diameter is 177.800 mm and the center opening is 5.0800 mm. Existing tests
+separately check the rotated drive dimensions and nominal clearances.
+
+The next supplier action is **feasibility confirmation and pricing**: use
+[SendCutSend contact](https://sendcutsend.com/contact/) for the PP request and
+Xometry's [sheet cutting quote entry](https://www.xometry.com/capabilities/sheet-cutting/)
+for PETG, requesting manual review if that gauge is unavailable in the portal.
+Ask both to state the minimum finished center-hole opening through the full
+thickness, so taper or a melted lip cannot prevent clearance over the
+4.8895 mm post. Also confirm drive-opening dimensions, location tolerances,
+corner rounding, stock thickness, flatness/edge condition and delivered price.
+No package has been uploaded or sent; no order has been placed.
+
+Regenerate these delivery packages after updating the prototype pack:
+
+```bash
+PYTHONPATH=src python3 scripts/build_supplier_packages.py
+```
+
 The [prepared prototype pack](../prototype_pack/README.md) now contains the
 [cutting DXF](../prototype_pack/pachelbel_cut_mm.dxf), an annotated preview,
 supplier-specific inquiry drafts, label PDFs/SVGs, and a recording sequence.
@@ -144,6 +184,12 @@ holes at or below 0.100 inch diameter can exceed standard tolerances on the
 top face because of piercing. The warning describes round holes; ask how
 piercing affects the 0.100 × 0.090-inch rectangular drive cutouts as well. Confirm achievable
 dimensions and corner rounding before accepting the quote.
+
+Its [sheet cutting capability page](https://www.xometry.com/capabilities/sheet-cutting/)
+also advertises automatic quotes for tolerances as tight as ±0.005 inch and
+manual review for tighter requirements. This is a capability statement, not
+confirmation for this thin PETG disk. Ask which tolerance is actually achievable
+for the center opening, small drive cutouts and their positions.
 
 Request a manual review of the material, thickness, bridges, and drive cutouts
 if the instant quote does not offer an appropriate option. Xometry's
