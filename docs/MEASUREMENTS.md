@@ -8,11 +8,12 @@ Mr. Christmas Animated Holiday Symphonium, model 140-24021.
 
 - Disc diameter: 7.000 in
 - Disc thickness: 0.020 in
-- Center-hole diameter: 0.196 in
+- Center-hole diameter, latest reading: 0.1995 in; user has lower confidence positioning the inside jaws in the small plastic hole
+- Prototype center-hole nominal: 0.200 in, rounded from independent clear-edge scan fits of approximately 0.198 in
 - Note-hole diameter: approximately 0.116 in
 - Disc edge to outer edge of drive hole: approximately 0.0760 in
 - Drive holes: approximately 0.09–0.10 in, initially described as square
-- Center-post diameter: 0.2085 in
+- Metal center-post diameter: 0.1925 in; corrected user measurement, trusted by the user
 - Approximate plucker-channel width: 0.040 in
 - Innermost-to-outermost plucker geometry implies about 0.11792 in pitch
 
@@ -91,17 +92,34 @@ ring while preserving relative note timing.
 
 ## Center hole and material fit
 
-Keep the original measured **0.196-inch center hole** for the first prototype.
-The measured 0.2085-inch post feature may be a wider rounded retainer above
-a smaller seating region. The follow-up describes that interpretation as
-plausible from the mechanism photographs, not a measured post profile.
-Do not enlarge the hole to the retainer diameter solely from that reading;
-doing so could change retention.
+The user corrected the metal post to **0.1925 inch** and trusts that reading.
+The latest original-hole reading is **0.1995 inch**, which the user considers
+less reliable: positioning the inside jaws in a small plastic opening is harder
+than measuring the metal post with the outside jaws. These
+corrections supersede the earlier 0.2085-inch post reading and the treatment
+of 0.196 inch as a settled measurement of the original hole.
 
-The seating diameter and exact fit remain unmeasured. Test whether the
-candidate material flexes over the post and seats like the original disk.
-A small sample with center holes near the nominal size is an optional way
-to investigate this before buying several full disks.
+The post is smaller than either hole value, resolving the apparent size
+conflict. A wider retaining head or snap-fit explanation is no longer needed
+to explain these measurements.
+
+The [independent clear-edge scan check](REFERENCE_CHECK.md#center-hole-edges-and-post-fit)
+fits the upper arc and opposed side arcs separately, excluding the downward
+shadow. It gives approximately **0.198 inch**, with both scan-DPI and
+outer-diameter calibrations recorded. The 0.1995-inch inside-jaw reading is
+consistent with the scan's practical optical boundary allowance; no additional
+caliper readings are needed to prepare these files.
+
+Use **0.200 inch as the rounded first-prototype nominal**, replacing 0.196 inch.
+This is a deliberate prototype dimension, not a claim that the scan resolves
+the original to four decimal places. It gives **0.0075 inch diametral clearance**,
+or **0.00375 inch per side**, over the trusted metal post. The 0.1995-inch
+inside-jaw reading would give 0.0070 inch diametral clearance.
+
+Ask the supplier whether finished-hole tolerances preserve clearance over the
+0.1925-inch post, then check that the manufactured disk seats without forcing
+it. The missing unobstructed post photograph is no longer needed to resolve
+the dimensional question. The original handoffs remain historical records.
 
 ## Original supporting files
 

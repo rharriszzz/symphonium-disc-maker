@@ -7,8 +7,10 @@ that hole ring is 1.78336 inches; the CLI rejects labels at or above that size.
 Leave room for cutting and placement error when choosing a size.
 
 The label center-hole diameter defaults to `geometry.json`. The current
-0.196-inch value duplicates the measured working original; material fit over
-the retaining post still needs testing, as described in
+0.200-inch value is a rounded prototype nominal from approximately 0.198-inch
+clear-edge scan fits, consistent with the less certain 0.1995-inch inside-jaw
+reading of the plastic hole. The trusted metal post is 0.1925 inch.
+Finished fit still needs testing, as described in
 [the ordering notes](ORDERING.md). `--center-hole` allows a larger
 label opening without changing the manufacturing geometry. A paper fitting
 test should establish the final label opening.

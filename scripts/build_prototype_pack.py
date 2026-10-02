@@ -66,6 +66,14 @@ def build_pack(geometry_path, arrangement_path, output, start_angle=230):
     ns, disc, drive = geometry["note_system"], geometry["disc"], geometry["drive_ring"]
     radial = drive.get("radial_size", drive.get("hole_size"))
     tangential = drive.get("tangential_size", drive.get("hole_size"))
+    fit = preflight["center_fit"]
+    post_note = (
+        f"The metal post measures {fit['post_diameter_in']:.4f} inch ({fit['post_diameter_in']*25.4:.4f} mm).\n"
+        f"The prototype center hole has only {fit['diametral_clearance_in']:.4f} inch "
+        f"({fit['diametral_clearance_mm']:.4f} mm) diametral clearance.\n"
+        "Please confirm finished-hole tolerances preserve clearance over this post.\n"
+        if fit else "Please confirm the finished center-hole fit before cutting.\n"
+    )
     for supplier, material in (("xometry", "clear PETG at 0.020 inch"),
                                ("sendcutsend", "clear polypropylene at 0.030 inch as a thickness experiment")):
         write(f"{supplier}_inquiry.txt", f"""DRAFT ONLY - not submitted
@@ -77,7 +85,7 @@ The original polymer is unknown, and the original thickness is {disc['thickness'
 
 Attached cutting file: pachelbel_cut_mm.dxf, at 1:1 scale in millimeters.
 Outside diameter: {disc['diameter']*25.4:.4f} mm.
-Center hole: {disc['center_hole_diameter']*25.4:.4f} mm, matching the working original.
+Center hole: {disc['center_hole_diameter']*25.4:.4f} mm, rounded scan-informed prototype nominal.
 Drive openings: {drive['hole_count']} rectangles, {radial*25.4:.4f} mm radial by {tangential*25.4:.4f} mm tangential.
 Their axes rotate with position around the ring.
 Music holes: {len(arrangement['events'])} circles, {ns['note_hole_diameter']*25.4:.4f} mm diameter.
@@ -85,9 +93,8 @@ Minimum drive-to-drive bridge: {preflight['clearances_mm']['drive_to_drive']:.4f
 Minimum drive-corner clearance to outside edge: {preflight['clearances_mm']['drive_to_outer_edge']:.4f} mm.
 
 Please confirm achievable finished hole dimensions, cutting tolerances, internal
-corner rounding and minimum bridges. The disk must remain flat, engage drive pins
-and pluckers, and flex over a possibly wider rounded center retainer. The seating
-profile is not measured. Please flag required geometry or material changes before
+corner rounding and minimum bridges. The disk must remain flat and engage drive
+pins and pluckers. {post_note}Please flag required geometry or material changes before
 cutting and identify any thickness-clearance concern. Include shipping and all
 setup or tooling fees. This is a prototype feasibility request; fit is untested.
 """)
@@ -142,7 +149,8 @@ The proposed materials are Xometry clear PETG at 0.020 inch and SendCutSend
 clear polypropylene at 0.030 inch. Confirm material/process availability,
 small-feature tolerances, quantity, shipping and total price before paying.
 The original disk is 0.020 inch thick; extra thickness in polypropylene needs
-a mechanism-clearance check. Retain the original center-hole nominal for this test.
+a mechanism-clearance check. Retain the {disc['center_hole_diameter']:.3f}-inch prototype center-hole nominal for this test.
+{post_note}
 
 Test the manufactured disk without a label first. Record at least two revolutions,
 identify the supplier/material, and compare all 20 attacks with the sequence.

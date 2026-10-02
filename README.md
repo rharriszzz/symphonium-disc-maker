@@ -17,7 +17,8 @@ The most important current working values are:
 
 - disc diameter: **7.000 in**
 - original disc thickness: **0.020 in**
-- center hole: **0.196 in**
+- prototype center hole: **0.200 in** (rounded from clear-edge scan fits)
+- trusted metal center post: **0.1925 in**
 - drive holes: **143**
 - nominal drive-hole size: **0.100 in radial × 0.090 in tangential**
 - drive-hole center radius: **3.373 in**
@@ -159,9 +160,11 @@ an active experiment.
 
 See [the prototype ordering notes](docs/ORDERING.md) for current supplier
 options, draft inquiries, and the measurements to resolve before paying.
-Retain the working original's 0.196-inch center hole. The measured 0.2085-inch
-post feature may be a wider retainer; the exact seating profile is unmeasured.
-Prototype material must reproduce the original fit. The corrected drive ring
+The prototype center-hole nominal is now 0.200 inch, rounded from approximately
+0.198-inch clear-edge scan fits and consistent with the less certain 0.1995-inch
+plastic-hole reading. The trusted metal post measures 0.1925 inch.
+The nominal hole gives 0.0075 inch diametral clearance;
+supplier tolerances and finished fit need checking. The corrected drive ring
 has bridges as narrow as 0.05602 inch. Supplier tolerances and material behavior
 still need confirmation.
 

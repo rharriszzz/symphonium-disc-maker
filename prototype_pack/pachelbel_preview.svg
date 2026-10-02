@@ -2,7 +2,7 @@
 <style>.cut{fill:none;stroke:#000;stroke-width:0.006}.guide{fill:none;stroke:#888;stroke-width:0.002;stroke-dasharray:0.025 0.025}.label{font-family:Arial,sans-serif;font-size:0.07px;text-anchor:middle;dominant-baseline:middle}</style>
 <g id="cut">
 <circle class="cut" cx="3.8500" cy="3.8500" r="3.5000" />
-<circle class="cut" cx="3.8500" cy="3.8500" r="0.0980" />
+<circle class="cut" cx="3.8500" cy="3.8500" r="0.1000" />
 <polygon class="cut" points="7.173000,3.895000 7.273000,3.895000 7.273000,3.805000 7.173000,3.805000" />
 <polygon class="cut" points="7.171769,3.748996 7.271673,3.744604 7.267720,3.654691 7.167816,3.659083" />
 <polygon class="cut" points="7.164127,3.603188 7.263741,3.594411 7.255842,3.504759 7.156228,3.513535" />

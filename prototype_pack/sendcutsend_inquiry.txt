@@ -7,7 +7,7 @@ The original polymer is unknown, and the original thickness is 0.020 inch.
 
 Attached cutting file: pachelbel_cut_mm.dxf, at 1:1 scale in millimeters.
 Outside diameter: 177.8000 mm.
-Center hole: 4.9784 mm, matching the working original.
+Center hole: 5.0800 mm, rounded scan-informed prototype nominal.
 Drive openings: 143 rectangles, 2.5400 mm radial by 2.2860 mm tangential.
 Their axes rotate with position around the ring.
 Music holes: 20 circles, 2.9464 mm diameter.
@@ -15,8 +15,10 @@ Minimum drive-to-drive bridge: 1.4228 mm.
 Minimum drive-corner clearance to outside edge: 1.9483 mm.
 
 Please confirm achievable finished hole dimensions, cutting tolerances, internal
-corner rounding and minimum bridges. The disk must remain flat, engage drive pins
-and pluckers, and flex over a possibly wider rounded center retainer. The seating
-profile is not measured. Please flag required geometry or material changes before
+corner rounding and minimum bridges. The disk must remain flat and engage drive
+pins and pluckers. The metal post measures 0.1925 inch (4.8895 mm).
+The prototype center hole has only 0.0075 inch (0.1905 mm) diametral clearance.
+Please confirm finished-hole tolerances preserve clearance over this post.
+Please flag required geometry or material changes before
 cutting and identify any thickness-clearance concern. Include shipping and all
 setup or tooling fees. This is a prototype feasibility request; fit is untested.

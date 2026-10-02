@@ -1,7 +1,8 @@
 """Check a scanned reference disk and optionally its audio without changing CAD.
 
 Run with PYTHONPATH=src and the optional analysis dependencies installed.
-Results describe optical measurements; caliper dimensions remain authoritative.
+Results describe optical measurements; record calibration and measurement
+confidence before selecting prototype dimensions.
 """
 from __future__ import annotations
 

@@ -1,7 +1,9 @@
 # TODO
 
 ## Geometry
-- [ ] Measure center-post seating profile and test material fit while retaining the original 0.196-inch hole.
+- [x] Record corrected trusted 0.1925-inch metal post and less certain 0.1995-inch original-hole reading.
+- [x] Independently measure clear center-hole arcs in the scan; select 0.200-inch rounded prototype nominal.
+- [ ] Verify finished 0.200-inch prototype hole clears the 0.1925-inch post; confirm supplier tolerances.
 - [x] Resolve drive-hole prototype dimensions from opposite-quadrant scan edges: 0.100 inch radial × 0.090 inch tangential.
 - [x] Apply handoff scan result: rotate drive squares with local radial/tangential axes.
 - [x] Reproduce scan analysis locally and check a calibrated geometry overlay.

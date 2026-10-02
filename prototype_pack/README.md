@@ -14,7 +14,7 @@ The same cutting geometry is intended for both supplier/material experiments.
   to review with the DXF. Quantity one each is proposed; price and fit are unknown.
 - **`label_fit_test.pdf`**: print on plain US Letter paper at actual size / 100%,
   disabling Fit and Shrink. Measure the one-inch ruler and a 1.50-inch circle,
-  then hand-cut one label and its 0.196-inch center opening. Check it on the original
+  then hand-cut one label and its 0.200-inch center opening. Check it on the original
   disk before using adhesive stock. This test can proceed without a cutter.
 - `labels_print.pdf` and `labels_print.svg`: printing artwork without cut lines.
 - `labels_cut.svg`: outer circles and center holes for cutter import.
@@ -32,7 +32,11 @@ The proposed materials are Xometry clear PETG at 0.020 inch and SendCutSend
 clear polypropylene at 0.030 inch. Confirm material/process availability,
 small-feature tolerances, quantity, shipping and total price before paying.
 The original disk is 0.020 inch thick; extra thickness in polypropylene needs
-a mechanism-clearance check. Retain the original center-hole nominal for this test.
+a mechanism-clearance check. Retain the 0.200-inch prototype center-hole nominal for this test.
+The metal post measures 0.1925 inch (4.8895 mm).
+The prototype center hole has only 0.0075 inch (0.1905 mm) diametral clearance.
+Please confirm finished-hole tolerances preserve clearance over this post.
+
 
 Test the manufactured disk without a label first. Record at least two revolutions,
 identify the supplier/material, and compare all 20 attacks with the sequence.

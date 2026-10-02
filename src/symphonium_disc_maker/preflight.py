@@ -87,6 +87,16 @@ def prototype_preflight(arrangement, geometry, *, start_angle_degrees=230, label
         problems.append("center_hole_fit_in_disk_and_label")
     if problems:
         raise ValueError("cut geometry overlaps or touches: " + ", ".join(problems))
+    center_fit = None
+    if "center_post_diameter" in geometry["disc"]:
+        post = float(geometry["disc"]["center_post_diameter"])
+        clearance = center_radius*2 - post
+        if not math.isfinite(post) or post <= 0 or clearance <= 0:
+            raise ValueError("center_hole_to_post: nominal hole must clear the metal post")
+        center_fit = {"post_diameter_in": post, "nominal_hole_diameter_in": center_radius*2,
+                      "diametral_clearance_in": clearance, "radial_clearance_in": clearance/2,
+                      "diametral_clearance_mm": clearance*25.4,
+                      "status": "positive nominal clearance; finished-hole tolerance and fit unverified"}
     times = sorted(event["time_seconds"] for event in arrangement["events"])
     gaps = [b-a for a, b in zip(times, times[1:])]
     gaps.append(arrangement["revolution_seconds"] - times[-1] + times[0])
@@ -99,5 +109,6 @@ def prototype_preflight(arrangement, geometry, *, start_angle_degrees=230, label
         "clearances_in": clearances,
         "clearances_mm": {name: value*25.4 for name, value in clearances.items()},
         "minimum_attack_gap_seconds": min(gaps),
-        "limits": "nominal 2D geometry only; excludes kerf, tolerances, corner rounding, thickness, post seating and tine reset/decay",
+        "center_fit": center_fit,
+        "limits": "nominal geometry only; excludes kerf, tolerances, corner rounding, thickness, finished post fit and tine reset/decay",
     }

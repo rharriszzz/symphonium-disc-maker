@@ -23,6 +23,14 @@ class PreflightTests(unittest.TestCase):
         self.assertAlmostEqual(result["clearances_in"]["drive_to_outer_edge"], .07670422, places=7)
         self.assertAlmostEqual(result["clearances_in"]["label_to_innermost_possible_music_hole"], .14168)
         self.assertTrue(all(value > 0 for value in result["clearances_in"].values()))
+        self.assertAlmostEqual(result["center_fit"]["post_diameter_in"], .1925)
+        self.assertAlmostEqual(result["center_fit"]["diametral_clearance_in"], .0075)
+        self.assertAlmostEqual(result["center_fit"]["radial_clearance_in"], .00375)
+
+    def test_center_hole_that_cannot_clear_known_post_is_rejected(self):
+        self.geometry["disc"]["center_post_diameter"] = .21
+        with self.assertRaisesRegex(ValueError, "center_hole_to_post"):
+            prototype_preflight(self.arrangement, self.geometry)
 
     def test_crossing_polygons_with_no_contained_vertices_touch(self):
         horizontal = [(-2, -.1), (2, -.1), (2, .1), (-2, .1)]

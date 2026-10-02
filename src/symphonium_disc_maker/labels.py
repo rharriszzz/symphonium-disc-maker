@@ -8,7 +8,7 @@ def _label_layout(
     subtitle: str = "",
     *,
     label_diameter_in: float = 1.50,
-    center_hole_diameter_in: float = 0.196,
+    center_hole_diameter_in: float = 0.200,
     columns: int = 4,
     rows: int = 5,
     page_width_in: float = 8.5,

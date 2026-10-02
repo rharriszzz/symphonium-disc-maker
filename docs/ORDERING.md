@@ -55,20 +55,26 @@ Values below come from `geometry.json` unless stated otherwise.
 | --- | ---: | ---: |
 | Outside diameter | 7.000 | 177.800 |
 | Original thickness | 0.020 | 0.508 |
-| Center hole, provisional | 0.196 | 4.9784 |
-| Center post, recorded in measurement notes | 0.2085 | 5.2959 |
+| Center hole, rounded prototype nominal | 0.200 | 5.0800 |
+| Metal center post, corrected trusted measurement | 0.1925 | 4.8895 |
 | Each drive cutout, radial | 0.100 | 2.540 |
 | Each drive cutout, tangential | 0.090 | 2.286 |
 | Drive cutout center radius | 3.373 | 85.6742 |
 | Music cutout diameter | 0.116 | 2.9464 |
 
-Retain the known-working original's measured **0.196-inch center hole** for
-the first prototype. It is 0.0125 inch (0.3175 mm) smaller than the measured
-post feature. The [follow-up](CODEX_FOLLOWUP_ROTATION_CENTERPOST.md) suggests
-the wider feature may be a rounded retainer over a smaller seating region,
-but does not establish the seating diameter. This makes material flexibility
-and finished hole size important fit tests. Do not enlarge the hole merely to
-match the widest measured post feature.
+Use **0.200 inch as the first-prototype center-hole nominal**. Clear upper and
+opposed side edges in the original scan give approximately 0.198 inch,
+consistent with the user's less certain 0.1995-inch inside-jaw reading of the
+plastic hole. The corrected trusted metal-post measurement is **0.1925 inch**.
+This resolves the earlier apparent mismatch; a retaining-head explanation is
+unnecessary. The original handoffs retain the superseded values as history.
+
+The prototype has **0.0075 inch (0.1905 mm) diametral clearance**, or 0.00375 inch
+per side. This is smaller than the suppliers' published general cutting
+tolerances below. Ask each supplier to confirm that the finished center hole
+will clear the 4.8895 mm post; nominal preflight cannot establish finished fit.
+See the [center-hole edge analysis](REFERENCE_CHECK.md#center-hole-edges-and-post-fit)
+for calibration, boundary allowance and the annotated crop.
 
 Both outputs represent the printed/top face. Chronological note holes are
 laid out clockwise to play in order during the reported counterclockwise
@@ -169,23 +175,24 @@ PETG at 0.020 inch"** for Xometry, or **"Please quote clear polypropylene at
 > manufacturable, the cut tolerances and internal corner rounding, and
 > whether the finished disk can be supplied flat with clean edges.
 >
-> The 4.9784 mm center hole duplicates the measured working original. The
-> material must tolerate fitting over a possibly wider rounded retaining post;
-> the seating profile is not yet measured. Please treat this file as a
+> The 5.0800 mm center hole is a rounded, scan-informed prototype nominal.
+> The trusted metal-post measurement is 4.8895 mm (0.1925 inch), giving only
+> 0.1905 mm (0.0075 inch) nominal diametral clearance. Please confirm finished-hole
+> tolerances preserve clearance over that post. Please treat this file as a
 > prototype feasibility and pricing request. Flag any required dimensional
 > changes or material substitutions before cutting.
 > Please include shipping and any setup or tooling fees in the quote.
 
 ## Before ordering and after delivery
 
-1. Retain the original 0.196-inch hole and use the scan-derived 0.100 × 0.090-inch
-   drive cutout nominals. Check the post seating profile if accessible.
+1. Use the rounded 0.200-inch center hole and scan-derived 0.100 × 0.090-inch
+   drive cutout nominals. The trusted metal post is 0.1925 inch.
 2. Confirm material, thickness, feature limits, tolerances, quantity, and total
    price with each company. Regenerate the DXF if dimensions change.
 3. Compare the quote preview with the original disk and pay for the agreed
    prototype only after those details are settled.
 4. On receipt, check flatness, thickness, hole dimensions, and whether the
-   material flexes over the post and seats like the original without forcing
+   hole clears the post and the disk seats like the original without forcing
    it. Confirm the top face and first test playback without a label.
 5. Record at least two revolutions and identify each supplier/material.
    Follow `prototype_pack/recording_sequence.csv` to check all 20 tines.

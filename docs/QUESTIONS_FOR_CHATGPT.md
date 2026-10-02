@@ -1,7 +1,8 @@
 # Findings and questions for the original ChatGPT conversation
 
 Date: October 1, 2026. Repository: `rharriszzz/symphonium-disc-maker`.
-Implementation and evidence are in commit `4246149` on `main`.
+Initial implementation and evidence are in commit `4246149` on `main`;
+later verification and current center-hole corrections are recorded below.
 
 Please review this note alongside your original conversation and supporting
 material. Your two handoff documents provided enough information to start;
@@ -24,8 +25,11 @@ remaining uncertainties.
   it at every tested period from 28.08 to 28.16 seconds. These are descriptive
   onset scores using the provisional pitch map, not probabilities or a full
   transcription.
-- The original **0.196-inch center hole** remains the prototype nominal.
-  The 0.2085-inch post measurement does not establish its seating diameter.
+- The user corrected the trusted metal post to **0.1925 inch** and the less
+  certain plastic-hole inside-jaw reading to **0.1995 inch**. Independent
+  clear-edge scan fits give approximately **0.198 inch**. The prototype uses
+  a rounded **0.200-inch hole**; the earlier 0.2085 post and 0.196 hole values
+  are superseded. A retaining-head explanation is no longer needed.
 - Labels default to **1.50-inch circles**, leaving 0.14168 inch of radial
   clearance to the innermost music-hole edge. Separate printing and cutting
   SVGs are available; automatic cutter registration is still unresolved.
@@ -33,8 +37,9 @@ remaining uncertainties.
   and SendCutSend **0.030-inch clear polypropylene**. Draft inquiries and
   manufacturing files are prepared locally. **No inquiry, quote request, or
   order has been submitted.**
-- All **20 tests pass**, including SVG/DXF agreement, rotated drive openings,
-  playback direction, legacy square geometry, and label layout checks.
+- Automated checks cover SVG/DXF agreement, rotated drive openings,
+  playback direction, legacy square geometry, label layout, PDF scale,
+  nominal post clearance and synthetic shadow recovery.
 
 ## Updated drive-hole dimensions: please review independently
 
@@ -89,14 +94,13 @@ The full report and detected-hole tables are generated locally under
 
 ## Existing supporting material that would help
 
-**Question 2 — center post:** Your follow-up refers to mechanism photographs
-supporting a rounded or retaining post above a smaller seating region. Do you
-still have those original photographs? Please identify which image shows the
-seating neck, retainer, and disk contact plane, and whether any seating-neck
-dimension was actually measured. The photographs have not yet been supplied
-to this repo session. We are retaining the original hole size while testing
-material flexibility; a new measurement is not required to prepare the first
-prototype.
+**Question 2 — center post: resolved by corrected measurements.** The user
+trusts the metal-post reading of 0.1925 inch. Both the 0.1995-inch plastic-hole
+reading and the independent scan estimate put the hole above that diameter.
+The request for a missing post photograph is withdrawn; no additional
+center-post material or repeated caliper measurements are needed to prepare
+the prototype. Please do not carry the old 0.2085/0.196 mismatch or the inferred
+retaining-head explanation into further recommendations.
 
 **Question 3 — pitch mapping and prior analysis:** Was the C4–A6 diatonic
 inner-to-outer map independently established for each tine, or assumed for
@@ -119,8 +123,10 @@ yet been demonstrated; Windows architecture and Mac details are unknown.
 
 ## Requested reply
 
-Please answer the four numbered questions in a Markdown file, preferably
-`docs/CHATGPT_RESPONSE.md`, with links or original supporting files where
+If replying again, prioritize the still-unresolved Gazelle installer question;
+independent comments on drive boundaries or isolated-tine evidence are welcome.
+The center-post question is resolved. Please put any reply in a Markdown file,
+preferably `docs/CHATGPT_RESPONSE_FOLLOWUP.md`, with links or supporting files where
 available. Explicitly mark unavailable artifacts and unverified conclusions.
 The user can pass the reply and attachments back to Codex. Preserve the
 original handoff documents as historical context; current implementation
@@ -140,10 +146,10 @@ the photograph identities: the supplied files show:
 
 Your response describes `IMG_3361.jpeg` as the best center-post photograph
 and `IMG_3362.jpeg` as an installed disk at the gear. Those descriptions do
-not match these attachments. **Was the intended unobstructed center-post
-photograph omitted or given another filename?** Please provide that existing
-image if available and correct the photo descriptions. The current 0.196-inch
-prototype center hole remains unchanged.
+not match these attachments. Please correct the photo descriptions in any
+further analysis. The earlier request for an unobstructed post photograph is
+withdrawn following the user's corrected 0.1925-inch measurement; the photo
+identity discrepancy no longer blocks the dimensional work.
 
 ## Local verification completed after the response
 
@@ -163,7 +169,29 @@ The independent checks now reproduce the main shape and pitch-map conclusions:
 - Sampler attacks are 1.4063 seconds apart. They may have overlapping decay,
   so please avoid describing them as guaranteed isolated clean tine samples.
 
+## Center-hole correction after the user's latest measurements
+
+The user finds the outside-jaw metal-post measurement much easier than using
+the inside jaws on the small plastic hole. Treat 0.1925 inch as the trusted
+post value and 0.1995 inch as the less certain original-hole reading.
+
+The scan's downward shadow shrinks its apparent white opening. Independent
+circle fits to the clear upper arc and opposed side arcs give 118.98 and
+119.33 pixels at 1-pixel smoothing. Using the scan's 599.9988 dpi gives
+0.19830 and 0.19888 inch; using the 7-inch outer-diameter calibration gives
+0.19772 and 0.19830 inch. Both are consistent with the user's hole reading
+within the practical optical boundary allowance. A full-perimeter fit includes
+the lower shadow and underestimates the diameter.
+
+The prototype and matching label openings now use **0.200 inch**, a rounded
+test nominal, with **0.0075 inch diametral clearance** over the metal post.
+The DXF, label PDFs/SVGs, supplier drafts and pack manifest have been regenerated.
+Finished supplier hole tolerance still needs confirmation. See
+[the annotated crop and method](REFERENCE_CHECK.md#center-hole-edges-and-post-fit)
+and [the reproducible analysis](../scripts/measure_center_hole.py).
+
 The [methods and full results](REFERENCE_CHECK.md) and
 [prototype pack](../prototype_pack/README.md) are committed. No further general
-summary is needed. The outstanding useful artifact remains the correctly
-identified unobstructed center-post photograph, if it exists.
+summary is needed. The outstanding useful artifact is a surviving Gazelle/CUTOK
+installer or verified download for the user's Windows 11 or Mac workflow.
+The center-post photograph is no longer required.

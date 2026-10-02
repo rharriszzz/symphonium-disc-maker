@@ -14,9 +14,13 @@
   "disc": {
     "diameter": 7.0,
     "thickness": 0.02,
-    "center_hole_diameter": 0.196,
-    "center_hole_source": "direct caliper measurement of the known-working original; retain this nominal pending material fit tests",
-    "center_post_fit_status": "a 0.2085-inch post feature was measured; tapered or snap-retaining profile is plausible but seating diameter is unmeasured"
+    "center_hole_diameter": 0.2,
+    "center_hole_source": "rounded prototype nominal from approximately 0.198-inch clear-edge scan fits; consistent with the less certain 0.1995-inch plastic-hole caliper reading; see docs/REFERENCE_CHECK.md",
+    "center_hole_measured_diameter": 0.1995,
+    "center_hole_measurement_status": "latest user reading; lower confidence positioning the inside jaws in the small plastic opening than using the outside jaws on the metal post; independently consistent with clear-edge scan fits",
+    "center_post_diameter": 0.1925,
+    "center_post_source": "corrected user measurement; user trusts the dimension of the metal post; supersedes the earlier 0.2085-inch value",
+    "center_post_fit_status": "0.200-inch prototype hole gives 0.0075-inch diametral clearance over the trusted 0.1925-inch metal post; finished-hole tolerance and physical fit still need checking"
   },
   "drive_ring": {
     "hole_count": 143,
@@ -34,8 +38,13 @@
     "track_count": 20,
     "pitch_map_status": "C4 through G6 is the best global fit among tested consecutive-white-key maps; individual tine measurements pending; track 20 A6 inferred because the reference disk does not play it",
     "pitch_map_source": "docs/REFERENCE_CHECK.md independent 22-map comparison, two FFT sizes, fundamental-only and harmonic-weighted evidence, and separate-revolution checks",
-    "single_attack_reference_tracks": [18, 19],
-    "unplayed_reference_tracks": [20],
+    "single_attack_reference_tracks": [
+      18,
+      19
+    ],
+    "unplayed_reference_tracks": [
+      20
+    ],
     "note_hole_diameter": 0.116,
     "inner_track_center_radius": 0.94968,
     "track_pitch": 0.117921,

@@ -2,86 +2,86 @@
 <style>.cut{fill:none;stroke:#000;stroke-width:0.006}.title{font:bold 0.120000px Arial;text-anchor:middle}.sub{font:0.075000px Arial;text-anchor:middle}</style>
 <g id="cut">
 <circle class="cut" cx="1.4750" cy="1.6200" r="0.7500"/>
-<circle class="cut" cx="1.4750" cy="1.6200" r="0.0980"/>
+<circle class="cut" cx="1.4750" cy="1.6200" r="0.1000"/>
 <circle class="cut" cx="3.3250" cy="1.6200" r="0.7500"/>
-<circle class="cut" cx="3.3250" cy="1.6200" r="0.0980"/>
+<circle class="cut" cx="3.3250" cy="1.6200" r="0.1000"/>
 <circle class="cut" cx="5.1750" cy="1.6200" r="0.7500"/>
-<circle class="cut" cx="5.1750" cy="1.6200" r="0.0980"/>
+<circle class="cut" cx="5.1750" cy="1.6200" r="0.1000"/>
 <circle class="cut" cx="7.0250" cy="1.6200" r="0.7500"/>
-<circle class="cut" cx="7.0250" cy="1.6200" r="0.0980"/>
+<circle class="cut" cx="7.0250" cy="1.6200" r="0.1000"/>
 <circle class="cut" cx="1.4750" cy="3.5600" r="0.7500"/>
-<circle class="cut" cx="1.4750" cy="3.5600" r="0.0980"/>
+<circle class="cut" cx="1.4750" cy="3.5600" r="0.1000"/>
 <circle class="cut" cx="3.3250" cy="3.5600" r="0.7500"/>
-<circle class="cut" cx="3.3250" cy="3.5600" r="0.0980"/>
+<circle class="cut" cx="3.3250" cy="3.5600" r="0.1000"/>
 <circle class="cut" cx="5.1750" cy="3.5600" r="0.7500"/>
-<circle class="cut" cx="5.1750" cy="3.5600" r="0.0980"/>
+<circle class="cut" cx="5.1750" cy="3.5600" r="0.1000"/>
 <circle class="cut" cx="7.0250" cy="3.5600" r="0.7500"/>
-<circle class="cut" cx="7.0250" cy="3.5600" r="0.0980"/>
+<circle class="cut" cx="7.0250" cy="3.5600" r="0.1000"/>
 <circle class="cut" cx="1.4750" cy="5.5000" r="0.7500"/>
-<circle class="cut" cx="1.4750" cy="5.5000" r="0.0980"/>
+<circle class="cut" cx="1.4750" cy="5.5000" r="0.1000"/>
 <circle class="cut" cx="3.3250" cy="5.5000" r="0.7500"/>
-<circle class="cut" cx="3.3250" cy="5.5000" r="0.0980"/>
+<circle class="cut" cx="3.3250" cy="5.5000" r="0.1000"/>
 <circle class="cut" cx="5.1750" cy="5.5000" r="0.7500"/>
-<circle class="cut" cx="5.1750" cy="5.5000" r="0.0980"/>
+<circle class="cut" cx="5.1750" cy="5.5000" r="0.1000"/>
 <circle class="cut" cx="7.0250" cy="5.5000" r="0.7500"/>
-<circle class="cut" cx="7.0250" cy="5.5000" r="0.0980"/>
+<circle class="cut" cx="7.0250" cy="5.5000" r="0.1000"/>
 <circle class="cut" cx="1.4750" cy="7.4400" r="0.7500"/>
-<circle class="cut" cx="1.4750" cy="7.4400" r="0.0980"/>
+<circle class="cut" cx="1.4750" cy="7.4400" r="0.1000"/>
 <circle class="cut" cx="3.3250" cy="7.4400" r="0.7500"/>
-<circle class="cut" cx="3.3250" cy="7.4400" r="0.0980"/>
+<circle class="cut" cx="3.3250" cy="7.4400" r="0.1000"/>
 <circle class="cut" cx="5.1750" cy="7.4400" r="0.7500"/>
-<circle class="cut" cx="5.1750" cy="7.4400" r="0.0980"/>
+<circle class="cut" cx="5.1750" cy="7.4400" r="0.1000"/>
 <circle class="cut" cx="7.0250" cy="7.4400" r="0.7500"/>
-<circle class="cut" cx="7.0250" cy="7.4400" r="0.0980"/>
+<circle class="cut" cx="7.0250" cy="7.4400" r="0.1000"/>
 <circle class="cut" cx="1.4750" cy="9.3800" r="0.7500"/>
-<circle class="cut" cx="1.4750" cy="9.3800" r="0.0980"/>
+<circle class="cut" cx="1.4750" cy="9.3800" r="0.1000"/>
 <circle class="cut" cx="3.3250" cy="9.3800" r="0.7500"/>
-<circle class="cut" cx="3.3250" cy="9.3800" r="0.0980"/>
+<circle class="cut" cx="3.3250" cy="9.3800" r="0.1000"/>
 <circle class="cut" cx="5.1750" cy="9.3800" r="0.7500"/>
-<circle class="cut" cx="5.1750" cy="9.3800" r="0.0980"/>
+<circle class="cut" cx="5.1750" cy="9.3800" r="0.1000"/>
 <circle class="cut" cx="7.0250" cy="9.3800" r="0.7500"/>
-<circle class="cut" cx="7.0250" cy="9.3800" r="0.0980"/>
+<circle class="cut" cx="7.0250" cy="9.3800" r="0.1000"/>
 </g>
 <g id="artwork">
-<text class="title" x="1.4750" y="1.4420">PACHELBEL</text>
-<text class="sub" x="1.4750" y="1.8580">20-tine sampler</text>
-<text class="title" x="3.3250" y="1.4420">PACHELBEL</text>
-<text class="sub" x="3.3250" y="1.8580">20-tine sampler</text>
-<text class="title" x="5.1750" y="1.4420">PACHELBEL</text>
-<text class="sub" x="5.1750" y="1.8580">20-tine sampler</text>
-<text class="title" x="7.0250" y="1.4420">PACHELBEL</text>
-<text class="sub" x="7.0250" y="1.8580">20-tine sampler</text>
-<text class="title" x="1.4750" y="3.3820">PACHELBEL</text>
-<text class="sub" x="1.4750" y="3.7980">20-tine sampler</text>
-<text class="title" x="3.3250" y="3.3820">PACHELBEL</text>
-<text class="sub" x="3.3250" y="3.7980">20-tine sampler</text>
-<text class="title" x="5.1750" y="3.3820">PACHELBEL</text>
-<text class="sub" x="5.1750" y="3.7980">20-tine sampler</text>
-<text class="title" x="7.0250" y="3.3820">PACHELBEL</text>
-<text class="sub" x="7.0250" y="3.7980">20-tine sampler</text>
-<text class="title" x="1.4750" y="5.3220">PACHELBEL</text>
-<text class="sub" x="1.4750" y="5.7380">20-tine sampler</text>
-<text class="title" x="3.3250" y="5.3220">PACHELBEL</text>
-<text class="sub" x="3.3250" y="5.7380">20-tine sampler</text>
-<text class="title" x="5.1750" y="5.3220">PACHELBEL</text>
-<text class="sub" x="5.1750" y="5.7380">20-tine sampler</text>
-<text class="title" x="7.0250" y="5.3220">PACHELBEL</text>
-<text class="sub" x="7.0250" y="5.7380">20-tine sampler</text>
-<text class="title" x="1.4750" y="7.2620">PACHELBEL</text>
-<text class="sub" x="1.4750" y="7.6780">20-tine sampler</text>
-<text class="title" x="3.3250" y="7.2620">PACHELBEL</text>
-<text class="sub" x="3.3250" y="7.6780">20-tine sampler</text>
-<text class="title" x="5.1750" y="7.2620">PACHELBEL</text>
-<text class="sub" x="5.1750" y="7.6780">20-tine sampler</text>
-<text class="title" x="7.0250" y="7.2620">PACHELBEL</text>
-<text class="sub" x="7.0250" y="7.6780">20-tine sampler</text>
-<text class="title" x="1.4750" y="9.2020">PACHELBEL</text>
-<text class="sub" x="1.4750" y="9.6180">20-tine sampler</text>
-<text class="title" x="3.3250" y="9.2020">PACHELBEL</text>
-<text class="sub" x="3.3250" y="9.6180">20-tine sampler</text>
-<text class="title" x="5.1750" y="9.2020">PACHELBEL</text>
-<text class="sub" x="5.1750" y="9.6180">20-tine sampler</text>
-<text class="title" x="7.0250" y="9.2020">PACHELBEL</text>
-<text class="sub" x="7.0250" y="9.6180">20-tine sampler</text>
+<text class="title" x="1.4750" y="1.4400">PACHELBEL</text>
+<text class="sub" x="1.4750" y="1.8600">20-tine sampler</text>
+<text class="title" x="3.3250" y="1.4400">PACHELBEL</text>
+<text class="sub" x="3.3250" y="1.8600">20-tine sampler</text>
+<text class="title" x="5.1750" y="1.4400">PACHELBEL</text>
+<text class="sub" x="5.1750" y="1.8600">20-tine sampler</text>
+<text class="title" x="7.0250" y="1.4400">PACHELBEL</text>
+<text class="sub" x="7.0250" y="1.8600">20-tine sampler</text>
+<text class="title" x="1.4750" y="3.3800">PACHELBEL</text>
+<text class="sub" x="1.4750" y="3.8000">20-tine sampler</text>
+<text class="title" x="3.3250" y="3.3800">PACHELBEL</text>
+<text class="sub" x="3.3250" y="3.8000">20-tine sampler</text>
+<text class="title" x="5.1750" y="3.3800">PACHELBEL</text>
+<text class="sub" x="5.1750" y="3.8000">20-tine sampler</text>
+<text class="title" x="7.0250" y="3.3800">PACHELBEL</text>
+<text class="sub" x="7.0250" y="3.8000">20-tine sampler</text>
+<text class="title" x="1.4750" y="5.3200">PACHELBEL</text>
+<text class="sub" x="1.4750" y="5.7400">20-tine sampler</text>
+<text class="title" x="3.3250" y="5.3200">PACHELBEL</text>
+<text class="sub" x="3.3250" y="5.7400">20-tine sampler</text>
+<text class="title" x="5.1750" y="5.3200">PACHELBEL</text>
+<text class="sub" x="5.1750" y="5.7400">20-tine sampler</text>
+<text class="title" x="7.0250" y="5.3200">PACHELBEL</text>
+<text class="sub" x="7.0250" y="5.7400">20-tine sampler</text>
+<text class="title" x="1.4750" y="7.2600">PACHELBEL</text>
+<text class="sub" x="1.4750" y="7.6800">20-tine sampler</text>
+<text class="title" x="3.3250" y="7.2600">PACHELBEL</text>
+<text class="sub" x="3.3250" y="7.6800">20-tine sampler</text>
+<text class="title" x="5.1750" y="7.2600">PACHELBEL</text>
+<text class="sub" x="5.1750" y="7.6800">20-tine sampler</text>
+<text class="title" x="7.0250" y="7.2600">PACHELBEL</text>
+<text class="sub" x="7.0250" y="7.6800">20-tine sampler</text>
+<text class="title" x="1.4750" y="9.2000">PACHELBEL</text>
+<text class="sub" x="1.4750" y="9.6200">20-tine sampler</text>
+<text class="title" x="3.3250" y="9.2000">PACHELBEL</text>
+<text class="sub" x="3.3250" y="9.6200">20-tine sampler</text>
+<text class="title" x="5.1750" y="9.2000">PACHELBEL</text>
+<text class="sub" x="5.1750" y="9.6200">20-tine sampler</text>
+<text class="title" x="7.0250" y="9.2000">PACHELBEL</text>
+<text class="sub" x="7.0250" y="9.6200">20-tine sampler</text>
 </g>
 </svg>

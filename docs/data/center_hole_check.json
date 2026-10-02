@@ -1,0 +1,127 @@
+{
+  "scan": {
+    "path": "/mnt/c/Users/rharr/OneDrive/Documents/img20261001_00272891.png",
+    "sha256": "28d027319a2089ae00057cc1f4a5251d0b31b841818b010b366b6f2b41686c6f"
+  },
+  "script": {
+    "path": "/home/rharris/git/symphonium-disc-maker/scripts/measure_center_hole.py",
+    "sha256": "52c7ad7c4cbdb9ee022a312e8c4c1a22e817844eb92d0ba49f332e09cec9ef06"
+  },
+  "geometry": {
+    "path": "/home/rharris/git/symphonium-disc-maker/geometry.json",
+    "sha256": "5139392094732aad997902f8bfc370a1eef9c1bde40b4ac11c7927825e7af754"
+  },
+  "disk_fit": {
+    "center_x_pixels": 2396.326786794567,
+    "center_y_pixels": 4361.877154515261,
+    "radius_pixels": 2106.1385307423516,
+    "boundary_residual_rms_pixels": 1.1014932016272867
+  },
+  "calibrated_pixels_per_inch": 601.7538659263862,
+  "scan_dpi": 599.9988,
+  "crop_origin_pixels": [
+    2296,
+    4261
+  ],
+  "checks": [
+    {
+      "smoothing_pixels": 0.5,
+      "fits": {
+        "upper_arc": {
+          "center_x_pixels": 2396.1500832732395,
+          "center_y_pixels": 4365.7773621143915,
+          "diameter_pixels": 118.95657420759653,
+          "radial_residual_rms_pixels": 0.20946572058556664,
+          "edge_count": 95,
+          "diameter_in_calibrated_to_7_inch_disk": 0.19768310756835045,
+          "diameter_in_scan_dpi": 0.19826135353536797
+        },
+        "opposed_side_arcs": {
+          "center_x_pixels": 2396.0202500828123,
+          "center_y_pixels": 4366.433066473006,
+          "diameter_pixels": 119.31281296123828,
+          "radial_residual_rms_pixels": 0.2612639942827842,
+          "edge_count": 54,
+          "diameter_in_calibrated_to_7_inch_disk": 0.19827510834111378,
+          "diameter_in_scan_dpi": 0.19885508597890245
+        },
+        "full_perimeter_shadow_biased": {
+          "center_x_pixels": 2396.3468215012817,
+          "center_y_pixels": 4364.618071709205,
+          "diameter_pixels": 117.89197623685405,
+          "radial_residual_rms_pixels": 2.1350628120240525,
+          "edge_count": 180,
+          "diameter_in_calibrated_to_7_inch_disk": 0.19591394906181794,
+          "diameter_in_scan_dpi": 0.1964870200354635
+        }
+      }
+    },
+    {
+      "smoothing_pixels": 1,
+      "fits": {
+        "upper_arc": {
+          "center_x_pixels": 2396.1752774382912,
+          "center_y_pixels": 4365.728936009971,
+          "diameter_pixels": 118.98127001890361,
+          "radial_residual_rms_pixels": 0.19293390806033928,
+          "edge_count": 95,
+          "diameter_in_calibrated_to_7_inch_disk": 0.19772414729024582,
+          "diameter_in_scan_dpi": 0.1983025133031993
+        },
+        "opposed_side_arcs": {
+          "center_x_pixels": 2396.0847464202516,
+          "center_y_pixels": 4366.385984353333,
+          "diameter_pixels": 119.32828509563633,
+          "radial_residual_rms_pixels": 0.20043787726834417,
+          "edge_count": 54,
+          "diameter_in_calibrated_to_7_inch_disk": 0.19830082007355812,
+          "diameter_in_scan_dpi": 0.19888087292113973
+        },
+        "full_perimeter_shadow_biased": {
+          "center_x_pixels": 2396.266971570464,
+          "center_y_pixels": 4364.060853823617,
+          "diameter_pixels": 117.31348277684265,
+          "radial_residual_rms_pixels": 1.9723676006764508,
+          "edge_count": 180,
+          "diameter_in_calibrated_to_7_inch_disk": 0.19495260341409065,
+          "diameter_in_scan_dpi": 0.19552286234046243
+        }
+      }
+    },
+    {
+      "smoothing_pixels": 1.5,
+      "fits": {
+        "upper_arc": {
+          "center_x_pixels": 2396.205340386231,
+          "center_y_pixels": 4365.537362659586,
+          "diameter_pixels": 118.90252886499005,
+          "radial_residual_rms_pixels": 0.18614564020908697,
+          "edge_count": 95,
+          "diameter_in_calibrated_to_7_inch_disk": 0.19759329453071706,
+          "diameter_in_scan_dpi": 0.19817127778420565
+        },
+        "opposed_side_arcs": {
+          "center_x_pixels": 2396.1114885628576,
+          "center_y_pixels": 4366.267744889202,
+          "diameter_pixels": 119.27493471319993,
+          "radial_residual_rms_pixels": 0.19765626174791734,
+          "edge_count": 54,
+          "diameter_in_calibrated_to_7_inch_disk": 0.19821216192700136,
+          "diameter_in_scan_dpi": 0.1987919554392441
+        },
+        "full_perimeter_shadow_biased": {
+          "center_x_pixels": 2396.285584692318,
+          "center_y_pixels": 4363.853343276958,
+          "diameter_pixels": 117.22399951894708,
+          "radial_residual_rms_pixels": 1.9504240655292289,
+          "edge_count": 180,
+          "diameter_in_calibrated_to_7_inch_disk": 0.1948038993293104,
+          "diameter_in_scan_dpi": 0.19537372327902505
+        }
+      }
+    }
+  ],
+  "optical_boundary_allowance": "approximately one pixel per edge; about 0.0033 inch on diameter, not a statistical confidence interval",
+  "method": "outward grayscale gradient; independently fit clear upper arc and opposed side arcs; shaded full-perimeter fit is diagnostic only",
+  "conclusion": "approximately 0.198-inch optical opening; 0.200-inch rounded prototype nominal, consistent with the less certain 0.1995-inch caliper reading"
+}

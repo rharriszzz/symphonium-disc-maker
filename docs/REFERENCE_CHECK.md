@@ -71,6 +71,74 @@ inches**, versus the CAD nominal 3.373 inches. Keep the working CAD nominal
 pending physical tests rather than adjusting it from this threshold-dependent
 measurement alone.
 
+## Center-hole edges and post fit
+
+The user corrected the trusted metal-post measurement to **0.1925 inch**.
+The latest plastic-hole inside-jaw reading is **0.1995 inch**, with lower
+confidence because the small opening is harder to measure. The older
+0.2085-inch post value is superseded, resolving the apparent hole/post mismatch.
+
+The center hole has a downward scanner shadow, and black printed artwork
+surrounds it. The bright area alone is approximately 0.189 inch in equivalent
+diameter and cannot be used as the physical opening diameter. Instead,
+`scripts/measure_center_hole.py` samples outward grayscale gradients every 2°,
+interpolated at 0.1-pixel intervals, from a 201 × 201 native-pixel crop.
+It fits the clear upper arc and opposed side arcs independently. The side arcs
+are within approximately 27° of horizontal, across the shadow. The upper fit
+excludes the shaded lower arc; the fitted center is allowed to move rather than
+being fixed to the shadow-displaced white-area centroid.
+
+At 1-pixel gradient smoothing:
+
+| Edges used | Diameter, pixels | At scan DPI, inches | At 7-inch disk calibration, inches | Radial residual RMS, pixels |
+| --- | ---: | ---: | ---: | ---: |
+| Clear upper arc | 118.981 | 0.19830 | 0.19772 | 0.193 |
+| Opposed side arcs | 119.328 | 0.19888 | 0.19830 | 0.200 |
+| Full perimeter, including shadow (diagnostic only) | 117.313 | 0.19552 | 0.19495 | 1.972 |
+
+The two useful fits agree within 0.35 pixel. Changing smoothing from 0.5 to
+1.5 pixels keeps upper-arc diameters within 0.08 pixel and side-arc diameters
+within 0.06 pixel. The shadow-biased full-perimeter fit has roughly ten times
+the residual and a smaller diameter. The low residual of the selected arcs
+checks their consistency; it does not prove absolute optical accuracy.
+
+![Center-hole clear edges and horizontal profiles](figures/center_hole_edges.png)
+
+The cyan circle is the upper-arc fit; green is the independent side-arc fit.
+Red points show the rejected lower-edge measurements. The profiles on the right
+cross opposite side edges at three heights. Their widths vary as circular chords
+should, while the bottom shadow shrinks the apparent vertical opening.
+
+The scan supports an opening of approximately **0.198 inch**, consistent with
+the user's 0.1995-inch reading. Its 599.9988 dpi metadata and the 601.754 ppi
+outer-diameter calibration differ by only about 0.0006 inch here. We retain
+both scales because the outer-diameter calibration assumes the 7-inch reading
+is exact. Allow approximately one pixel per optical edge, or **0.0033 inch on
+diameter**, as a practical boundary allowance rather than a statistical
+confidence interval. Interpolation does not add source resolution.
+
+The first prototype now uses a rounded **0.200-inch center hole**, replacing
+the earlier 0.196-inch nominal. This is a test dimension, not a four-decimal
+measurement of the original. It gives **0.0075 inch diametral clearance**
+(0.00375 inch per side) over the trusted metal post. Supplier finished-hole
+tolerance and actual seating still need confirmation; no missing post photo
+or additional caliper readings are needed to prepare the files.
+
+The [committed center-hole report](data/center_hole_check.json) records source
+fingerprints, both calibrations and all smoothing checks. A synthetic known-size
+opening with a downward shadow verifies that the clear arcs recover its diameter
+while the full-perimeter fit underestimates it.
+
+Reproduce from the repository root with the optional analysis dependencies:
+
+```bash
+MPLCONFIGDIR=/tmp/symphonium-matplotlib PYTHONPATH=src python3 scripts/measure_center_hole.py \
+  --scan /mnt/c/Users/rharr/OneDrive/Documents/img20261001_00272891.png
+```
+
+Outputs go to `output/center_check/`; neither the scan nor manufacturing inputs
+are changed by the analysis.
+
 ## Opposite drive-hole edges and prototype dimensions
 
 The original scan has enough resolution to distinguish the two drive-hole
@@ -260,8 +328,12 @@ MPLCONFIGDIR=/tmp/symphonium-matplotlib PYTHONPATH=src python3 scripts/verify_re
 
 This writes averaged-hole profiles, figures, candidate scores, a decoded audio
 copy, and a full report under `output/response_check/`. The committed report
-records the scan, audio, geometry, script, and supplied CSV fingerprints. The
-original supporting files remain unchanged and outside Git.
+records the scan, audio, geometry, script, and supplied CSV fingerprints. Its
+geometry and scripts are the historical versions in
+[commit 6f6a771](https://github.com/rharriszzz/symphonium-disc-maker/tree/6f6a77180d75839c6a91c49a42ff66a15c8eea5b),
+before the center-hole correction above. That correction does not change the
+drive-ring or pitch-map results; the historical report has been preserved.
+The original supporting files remain unchanged and outside Git.
 
 Generated files in `output/reference_check/` include:
 
