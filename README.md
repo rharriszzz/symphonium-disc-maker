@@ -146,6 +146,8 @@ Separate [Xometry](supplier_packages/xometry_quote.zip) and
 [SendCutSend](supplier_packages/sendcutsend_quote.zip) quote ZIPs now package
 the cutting DXF, a dimensioned reference PDF and each company's request.
 See [the delivery instructions](supplier_packages/README.md).
+For a step-by-step plan with clickable links and Windows folder paths, read
+`docs/NEXT_STEPS.md` or run `cat docs/NEXT_STEPS.md` in the repository terminal.
 
 To make PDF labels, install `pip install -e '.[print]'` and choose a `.pdf`
 output filename. Add `--calibration` for a paper fitting test. SVG and DXF
