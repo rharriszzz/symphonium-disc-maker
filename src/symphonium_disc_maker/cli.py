@@ -1,5 +1,6 @@
 from __future__ import annotations
 import argparse
+import math
 from pathlib import Path
 from .geometry import load_geometry
 from .arrangement import load_arrangement, normalize_arrangement, validate_minimum_same_track_gap
@@ -10,7 +11,8 @@ from .labels import write_label_sheet_svg
 def _common(parser):
     parser.add_argument("arrangement", help="Arrangement JSON file")
     parser.add_argument("--geometry", default="geometry.json", help="Geometry JSON file")
-    parser.add_argument("--start-angle", type=float, default=230.0, help="Angle for time zero, degrees")
+    parser.add_argument("--start-angle", type=float, default=230.0,
+                        help="Arbitrary time-zero layout angle in degrees; positive is counterclockwise from +X on the top face")
 
 def main(argv=None):
     p = argparse.ArgumentParser(prog="symphonium-disc")
@@ -34,16 +36,34 @@ def main(argv=None):
     p_label.add_argument("--subtitle", default="")
     p_label.add_argument("-o", "--output", required=True)
     p_label.add_argument("--diameter", type=float, default=1.50)
+    p_label.add_argument("--geometry", default="geometry.json")
+    p_label.add_argument("--center-hole", type=float, help="Label center hole diameter in inches; defaults to geometry")
+    p_label.add_argument("--columns", type=int, default=4)
+    p_label.add_argument("--rows", type=int, default=5)
+    p_label.add_argument("--mode", choices=("combined", "print", "cut"), default="combined")
 
     args = p.parse_args(argv)
 
     if args.cmd == "labels":
-        write_label_sheet_svg(
-            args.output,
-            args.title,
-            args.subtitle,
-            label_diameter_in=args.diameter,
-        )
+        g = load_geometry(args.geometry)
+        ns = g["note_system"]
+        maximum = 2 * (ns["inner_track_center_radius"] - ns["note_hole_diameter"] / 2)
+        if not math.isfinite(args.diameter) or args.diameter >= maximum:
+            p.error(f"label diameter must be smaller than {maximum:.5f} in to stay clear of note holes")
+        try:
+            write_label_sheet_svg(
+                args.output,
+                args.title,
+                args.subtitle,
+                label_diameter_in=args.diameter,
+                center_hole_diameter_in=(args.center_hole if args.center_hole is not None
+                                         else g["disc"]["center_hole_diameter"]),
+                columns=args.columns,
+                rows=args.rows,
+                mode=args.mode,
+            )
+        except ValueError as exc:
+            p.error(str(exc))
         return 0
 
     g = load_geometry(args.geometry)

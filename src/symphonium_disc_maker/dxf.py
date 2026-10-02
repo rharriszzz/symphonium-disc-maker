@@ -1,7 +1,7 @@
 from __future__ import annotations
 import math
 from pathlib import Path
-from .geometry import track_radius
+from .geometry import drive_hole_vertices, event_angle_degrees, track_radius
 
 MM_PER_INCH = 25.4
 
@@ -33,6 +33,7 @@ def build_dxf(
     start_angle_degrees: float = 230.0,
     millimeters: bool = True,
 ) -> str:
+    """Build through-cut geometry as viewed from the printed/top face."""
     scale = MM_PER_INCH if millimeters else 1.0
     disc = geometry["disc"]
     drive = geometry["drive_ring"]
@@ -51,19 +52,9 @@ def build_dxf(
     _circle(lines, 0, 0, disc["diameter"]/2*scale)
     _circle(lines, 0, 0, disc["center_hole_diameter"]/2*scale)
 
-    # Square drive holes as 4 LINE entities each.
-    s = drive["hole_size"] * scale
-    half = s/2
+    # Each opening follows the local radial/tangential axes, as in the scan.
     for i in range(int(drive["hole_count"])):
-        a = math.radians(i * 360.0 / drive["hole_count"])
-        cx = drive["center_radius"] * math.cos(a) * scale
-        cy = drive["center_radius"] * math.sin(a) * scale
-        pts = [
-            (cx-half, cy-half),
-            (cx+half, cy-half),
-            (cx+half, cy+half),
-            (cx-half, cy+half),
-        ]
+        pts = [(x * scale, y * scale) for x, y in drive_hole_vertices(geometry, i)]
         for j in range(4):
             x1,y1 = pts[j]
             x2,y2 = pts[(j+1)%4]
@@ -71,8 +62,7 @@ def build_dxf(
 
     nr = notes["note_hole_diameter"]/2*scale
     for event in arrangement["events"]:
-        frac = event["time_seconds"] / rev
-        a = math.radians(start_angle_degrees + 360.0*frac)
+        a = math.radians(event_angle_degrees(event["time_seconds"], rev, start_angle_degrees))
         r = track_radius(geometry, event["track"]) * scale
         _circle(lines, r*math.cos(a), r*math.sin(a), nr)
 

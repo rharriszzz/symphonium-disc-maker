@@ -5,3 +5,5 @@ __pycache__/
 .DS_Store
 output/*
 !output/.gitkeep
+reference_material/*
+!reference_material/.gitkeep

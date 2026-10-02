@@ -19,7 +19,7 @@ The most important current working values are:
 - original disc thickness: **0.020 in**
 - center hole: **0.196 in**
 - drive holes: **143**
-- nominal drive-hole size: **0.095 in square**
+- nominal drive-hole size: **0.100 in radial × 0.090 in tangential**
 - drive-hole center radius: **3.373 in**
 - note tracks: **20**
 - note-hole diameter: **0.116 in**
@@ -106,6 +106,13 @@ holes, and music-note holes.
 
 The disc encodes **note onset**, not conventional note duration.
 
+SVG and DXF show the **printed/top face**. Chronological holes proceed
+clockwise around that stationary design, matching the reported counterclockwise
+rotation during playback. Positive polar angles are counterclockwise from
+the right (+X). `--start-angle` sets an arbitrary layout phase (default 230°),
+not a measured reader angle. See the
+[rotation follow-up](docs/CODEX_FOLLOWUP_ROTATION_CENTERPOST.md) for the evidence.
+
 ## Labels
 
 Generate an 8.5 × 11 inch SVG sheet containing 20 circular labels:
@@ -120,6 +127,13 @@ symphonium-disc labels \
 The label output is intended for a print-and-cut device such as a
 BossKut Gazelle, Silhouette, Cricut, or similar machine.
 
+The default 1.50-inch center label stays clear of the music holes. Use
+`--mode print` for text only and `--mode cut` for circles only; `combined`
+is the default paper fitting preview. The CLI checks the label diameter
+against the innermost music holes and reads the center hole from `geometry.json`.
+See [the label workflow and Gazelle findings](docs/LABELS.md) for examples,
+alignment limitations, and the CUTOK driver investigation.
+
 ## Manufacturing notes
 
 For services such as SendCutSend or Xometry:
@@ -133,9 +147,30 @@ For services such as SendCutSend or Xometry:
 The original disc is approximately 0.020 inch thick. Material choice remains
 an active experiment.
 
+See [the prototype ordering notes](docs/ORDERING.md) for current supplier
+options, draft inquiries, and the measurements to resolve before paying.
+Retain the working original's 0.196-inch center hole. The measured 0.2085-inch
+post feature may be a wider retainer; the exact seating profile is unmeasured.
+Prototype material must reproduce the original fit. The corrected drive ring
+has bridges as narrow as 0.05602 inch. Supplier tolerances and material behavior
+still need confirmation.
+
+The [conversation handoff](docs/CODEX_HANDOFF.md) supplies the scan-derived
+drive-hole orientation. Both exporters rotate the openings around the ring.
+The first material candidates are Xometry's 0.020-inch clear PETG and
+SendCutSend's 0.030-inch clear polypropylene; their playback behavior remains
+to be tested.
+
+The [original scan and audio check](docs/REFERENCE_CHECK.md) independently
+supports the drive-hole orientation and playback direction. It includes a
+reproducible analysis script, a calibrated overlay, and detected-hole tables.
+Opposite-quadrant edge comparisons distinguish scanner shadows from the
+slightly rectangular openings and supply the current prototype dimensions.
+Optional analysis dependencies can be installed with `pip install -e '.[analysis]'`.
+
 ## Next steps
 
-- confirm exact drive-hole size and orientation;
+- test the scan-derived radial and tangential drive-hole sizes on a prototype;
 - cut the 20-note Pachelbel sampler;
 - record isolated real tines;
 - refine the playable pitch map and rotation timing;

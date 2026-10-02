@@ -1,16 +1,10 @@
 from __future__ import annotations
 import math
 from pathlib import Path
-from .geometry import track_radius
+from .geometry import drive_hole_vertices, event_angle_degrees, track_radius
 
 def _circle(cx, cy, r, cls="cut"):
     return f'<circle class="{cls}" cx="{cx:.4f}" cy="{cy:.4f}" r="{r:.4f}" />'
-
-def _rect_centered(cx, cy, w, h, cls="cut"):
-    return (
-        f'<rect class="{cls}" x="{cx-w/2:.4f}" y="{cy-h/2:.4f}" '
-        f'width="{w:.4f}" height="{h:.4f}" />'
-    )
 
 def build_svg(
     arrangement: dict,
@@ -20,6 +14,7 @@ def build_svg(
     include_track_guides: bool = True,
     include_note_labels: bool = True,
 ) -> str:
+    """Build a view of the printed/top face, with chronological holes clockwise."""
     disc = geometry["disc"]
     drive = geometry["drive_ring"]
     notes = geometry["note_system"]
@@ -43,18 +38,17 @@ def build_svg(
         _circle(center, center, float(disc["center_hole_diameter"])/2.0),
     ]
 
-    # Drive holes: keep them axis-aligned to match the factory scan appearance.
+    # Reflect Cartesian y for SVG; each opening follows the radial/tangential axes.
     for i in range(int(drive["hole_count"])):
-        angle = math.radians(i * 360.0 / drive["hole_count"])
-        x = center + drive["center_radius"] * math.cos(angle)
-        y = center - drive["center_radius"] * math.sin(angle)
-        s = float(drive["hole_size"])
-        lines.append(_rect_centered(x, y, s, s))
+        points = " ".join(
+            f"{center + x:.6f},{center - y:.6f}"
+            for x, y in drive_hole_vertices(geometry, i)
+        )
+        lines.append(f'<polygon class="cut" points="{points}" />')
 
     note_r = float(notes["note_hole_diameter"]) / 2.0
     for event in arrangement["events"]:
-        frac = event["time_seconds"] / rev
-        angle_deg = start_angle_degrees + 360.0 * frac
+        angle_deg = event_angle_degrees(event["time_seconds"], rev, start_angle_degrees)
         angle = math.radians(angle_deg)
         radius = track_radius(geometry, event["track"])
         x = center + radius * math.cos(angle)
@@ -70,8 +64,7 @@ def build_svg(
                 lines.append(_circle(center, center, track_radius(geometry, track), "guide"))
         if include_note_labels:
             for event in arrangement["events"]:
-                frac = event["time_seconds"] / rev
-                angle_deg = start_angle_degrees + 360.0 * frac
+                angle_deg = event_angle_degrees(event["time_seconds"], rev, start_angle_degrees)
                 angle = math.radians(angle_deg)
                 radius = max(0.35, track_radius(geometry, event["track"]) - 0.17)
                 x = center + radius * math.cos(angle)

@@ -2,16 +2,32 @@
   "model": "Mr. Christmas Animated Holiday Symphonium 140-24021",
   "status": "working reverse-engineered geometry; verify before manufacturing",
   "units": "inch",
+  "orientation": {
+    "cad_view": "top_printed_face",
+    "angle_zero_axis": "+x",
+    "positive_angle": "counterclockwise",
+    "physical_rotation_top_view": "counterclockwise",
+    "chronological_event_direction_top_view": "clockwise",
+    "source": "docs/CODEX_FOLLOWUP_ROTATION_CENTERPOST.md and docs/REFERENCE_CHECK.md; clockwise chronological placement independently supported by original scan/audio",
+    "start_angle_status": "arbitrary user-selectable layout phase, not mechanically measured; exporter and CLI default is 230 degrees"
+  },
   "disc": {
     "diameter": 7.0,
     "thickness": 0.02,
-    "center_hole_diameter": 0.196
+    "center_hole_diameter": 0.196,
+    "center_hole_source": "direct caliper measurement of the known-working original; retain this nominal pending material fit tests",
+    "center_post_fit_status": "a 0.2085-inch post feature was measured; tapered or snap-retaining profile is plausible but seating diameter is unmeasured"
   },
   "drive_ring": {
     "hole_count": 143,
-    "hole_shape": "square",
-    "hole_size": 0.095,
+    "hole_shape": "rectangle",
+    "radial_size": 0.1,
+    "tangential_size": 0.09,
+    "hole_size_status": "prototype nominals rounded from opposite-quadrant scan edge estimates: 0.09909 inch radial and 0.08808 inch tangential; approximately 1-2 pixel boundary uncertainty; consistent with earlier 0.09 to 0.10 inch caliper readings",
+    "hole_size_source": "docs/REFERENCE_CHECK.md opposite drive-hole edge check; original 600 dpi scan calibrated to measured 7-inch disk",
     "center_radius": 3.373,
+    "orientation": "radial_tangential",
+    "orientation_source": "docs/CODEX_HANDOFF.md sections 5 and 6, independently checked in docs/REFERENCE_CHECK.md against the original 600 dpi scan",
     "angular_pitch_degrees": 2.5174825174825175
   },
   "note_system": {

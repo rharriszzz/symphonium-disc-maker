@@ -1,0 +1,184 @@
+# Original scan and audio verification
+
+The original scan and recording were checked locally on October 1, 2026.
+They support the corrected radial/tangential drive holes and clockwise
+chronological note layout on the printed face. Comparing opposite drive holes
+also resolves the earlier size uncertainty well enough to select prototype
+nominals: **0.100 inch radial × 0.090 inch tangential**. These are scan-informed
+dimensions for a fit test, rather than exact manufacturing tolerances.
+
+## Supporting files
+
+Both originals are accessible directly through WSL; they were not copied into Git.
+
+- Scan: `/mnt/c/Users/rharr/OneDrive/Documents/img20261001_00272891.png`
+- Recording: `/mnt/c/Users/rharr/Downloads/116 E Main St 15.m4a`
+
+The scan is 5100 × 6600 pixels, RGB, with 599.9988 dpi metadata. The recording
+is mono AAC at 48 kHz and approximately 59.968 seconds long. The report records
+SHA-256 fingerprints of the source files and geometry used.
+
+## Scan results
+
+The script fits the outer boundary of the largest dark connected component,
+then detects bright enclosed regions. With a grayscale disk threshold of 140
+and hole thresholds of **both 150 and 170**, it finds:
+
+- **143 drive holes**, each assigned to a distinct position in a regular ring.
+- **145 music holes**, assigned to tracks 1 through 19.
+- **One center hole**. Track 20 has no music hole on this reference song.
+
+Hole centers, not printed graphics, supply the geometric comparisons.
+Each hole's fourth complex moment estimates the orientation of these nearly
+square openings modulo 90°. The radial/tangential orientation is substantially
+closer than globally axis-aligned openings.
+
+| Measurement | Hole threshold 150 | Hole threshold 170 |
+| --- | ---: | ---: |
+| Mean absolute radial/tangential orientation residual | 1.602° | 1.801° |
+| Mean absolute globally axis-aligned orientation residual | 23.003° | 23.271° |
+| Regular drive-ring angular RMS residual | 0.0381° | 0.0397° |
+| Drive radius RMS difference from CAD | 0.00286 in | 0.00315 in |
+| Music-hole radius RMS difference from assigned track | 0.00351 in | 0.00399 in |
+| Maximum music-hole radius difference | 0.00759 in | 0.00878 in |
+
+The fitted outer circle is centered at **(2396.327, 4361.877) pixels**, with a
+radius of **2106.139 pixels** and a boundary RMS residual of 1.101 pixels.
+Calibrating its diameter to the measured 7.000 inches gives **601.754 pixels
+per inch**, approximately 0.29% above the nominal scan DPI. This chosen
+calibration is explicit; it assumes the caliper diameter is correct.
+
+The fitted radius differs from the earlier handoff's 2104.615-pixel value by
+about 1.524 pixels. Different boundary thresholds include different amounts of
+the edge shadow. In exploratory fits, raising the disk threshold from 140 to
+180 changed the fitted radius to 2107.259 pixels. These are optical boundary
+choices, not evidence that the physical disk changed size.
+
+The selected scan calibration gives a mean drive-center radius of **3.37056
+inches**, versus the CAD nominal 3.373 inches. Keep the working CAD nominal
+pending physical tests rather than adjusting it from this threshold-dependent
+measurement alone.
+
+## Opposite drive-hole edges and prototype dimensions
+
+The original scan has enough resolution to distinguish the two drive-hole
+dimensions. A bright-pixel mask alone discards the shaded part of an opening;
+that was the limitation of the first local check, not of the supplied image.
+
+Following the user's suggestion, compare top with bottom and left with right.
+The shadow stays toward the bottom of the scanner image. In radial/tangential
+coordinates it switches sides between opposite holes. Because there are an
+odd **143** openings, none has an exactly opposite partner; the representative
+holes are approximately 179° apart.
+
+Measure edges **across** the shadow: radial width at the left and right of the
+disk, and tangential width at the top and bottom. The script samples central
+17-pixel strips along each local axis, interpolated at quarter-pixel intervals,
+and finds opposing grayscale edge gradients after 1-pixel smoothing. This
+sampling interpolates existing pixels; it does not increase source resolution.
+Groups within 10° of each cardinal position give:
+
+| Group | Axis measured across shadow | Holes | Median pixels | Inches |
+| --- | --- | ---: | ---: | ---: |
+| Right | Radial | 8 | 59.750 | 0.09929 |
+| Left | Radial | 8 | 59.500 | 0.09888 |
+| Top | Tangential | 7 | 52.750 | 0.08766 |
+| Bottom | Tangential | 8 | 53.125 | 0.08828 |
+| Left and right combined | Radial | 16 | 59.625 | **0.09909** |
+| Top and bottom combined | Tangential | 15 | 53.000 | **0.08808** |
+
+The opposite groups agree within 0.4 source pixels. Repeating with smoothing
+of 0.5 and 1.5 pixels changes group medians by at most 0.25 pixel relative to
+the 1-pixel result. The approximately **6.625-pixel** difference between axes
+is substantially larger than those variations. The openings appear slightly
+rectangular, with rounded corners; their size difference cannot be explained
+by a fixed downward shadow alone.
+
+Allow approximately 1–2 pixels (0.0017–0.0033 inch) for optical boundary
+choice; this is a practical allowance, not a calibrated confidence interval.
+Use **0.100 × 0.090 inch**, rounded prototype nominals consistent with the
+earlier 0.09–0.10-inch caliper readings. `geometry.json` now records the two
+axes separately, and SVG/DXF use them. The former 0.095-inch square was an
+average placeholder. No further caliper measurement is needed to choose this
+first prototype geometry; finished part fit still supplies the mechanical test.
+
+With the unchanged 3.373-inch center radius, the nominal outer clearance is
+**0.07670 inch**, close to the user's approximately 0.0760-inch measurement.
+The minimum bridge between adjacent drive cutouts is **0.05602 inch**.
+
+[The opposite-hole figure](figures/drive_opposites.png) shows native-resolution
+crops enlarged without smoothing and the radial/tangential edge profiles.
+A compact copy is retained with these notes; the full analysis output remains
+local. `report.json` records the group
+measurements, smoothing checks, and selected pair separations.
+
+## Music-hole size limits
+
+The detected music-hole area corresponds to a median circular diameter of
+0.10934 inch at threshold 150, falling to 0.10660 inch at threshold 170.
+This supports retaining the direct 0.116-inch caliper measurement instead of
+substituting the white-region diameter.
+
+For comparison, the original threshold-150 drive mask had median projected
+spans of 0.09558 inch radial and 0.08572 inch tangential. The edge comparison
+above replaces those white-region spans as the basis for drive-hole size.
+
+## Audio direction results
+
+The recording is decoded to mono 24 kHz for analysis. A short-time Fourier
+transform supplies energy near each provisional tine's fundamental and weaker
+second and third harmonics. Positive changes in log energy supply onset
+evidence. These channels are folded across the revolution period, smoothed
+periodically, and normalized separately.
+
+For each scanned music hole, the script compares both signs of the angle-to-time
+mapping while searching recording phase. At **28.126 seconds per revolution**:
+
+| Chronological angle direction | Best summed onset score |
+| --- | ---: |
+| Increasing angle | 67.37 |
+| Decreasing angle | 261.74 |
+
+Decreasing-angle order scores about **3.89 times higher**, and wins for every
+tested period: 28.08, 28.10, 28.12, 28.126, 28.14, and 28.16 seconds. This
+independently supports clockwise chronological holes on the stationary top-face
+CAD design and counterclockwise physical rotation viewed from above.
+
+These are descriptive scores, not probabilities or statistical significance.
+The analysis uses the provisional pitch map, does not transcribe the whole
+song, and does not establish every tine's pitch independently. It tests
+direction, not an exact new revolution period. The best recording phase near
+21.107 seconds includes the loose disk's scan orientation and recording start;
+it is not a mechanical reader angle. The CAD default 230° remains arbitrary.
+
+## Reproduce the check
+
+The production exporters still have no third-party runtime dependencies.
+The optional analysis script needs NumPy, SciPy, Pillow, Matplotlib, and an
+`ffmpeg` executable for the audio check.
+
+```bash
+pip install -e '.[analysis]'
+MPLCONFIGDIR=/tmp/symphonium-matplotlib PYTHONPATH=src python3 scripts/check_reference.py \
+  --scan /mnt/c/Users/rharr/OneDrive/Documents/img20261001_00272891.png \
+  --audio '/mnt/c/Users/rharr/Downloads/116 E Main St 15.m4a'
+```
+
+Omit `--audio` for a scan-only run. `--disc-threshold`, `--hole-thresholds`,
+`--geometry`, and `--output` are adjustable. The first hole threshold supplies
+the overlay and audio-hole positions; the remaining thresholds check sensitivity.
+
+Generated files in `output/reference_check/` include:
+
+- `scan_overlay.png`: cyan CAD drive openings, purple track centers, green
+  detected music-hole centers. Only the regular drive ring's phase is aligned
+  to the loose scan; its CAD radius and hole size are unchanged.
+- `drive_opposites.png`: opposite drive-hole crops and both local edge profiles,
+  identifying measurements across versus along the scanner shadow.
+- `audio_direction.png` and `audio_direction.csv`: both direction scores over
+  recording phase at the nominal period.
+- `report.json`: calibration, threshold checks, source fingerprints, and audio
+  scores across trial periods.
+- `detected_holes.json` and `detected_holes.csv`: detected positions,
+  orientations, optical dimensions, and note-track assignments.
+- `reference_audio.wav`: decoded analysis copy; the original M4A is unchanged.
